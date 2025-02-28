@@ -1,14 +1,14 @@
 <template>
   <form @submit.prevent="login">
     <div class="input-group">
-      <label for="email">Email:</label>
+      <label for="email">{{ $t('auth.login') }}:</label>
       <input type="email" id="email" v-model="email" required />
     </div>
     <div class="input-group">
-      <label for="password">Password:</label>
+      <label for="password">{{ $t('auth.password') }}:</label>
       <input type="password" id="password" v-model="password" required />
     </div>
-    <button type="submit" :disabled="loading">Login</button>
+    <button type="submit" :disabled="loading">{{ $t('auth.sign_in') }}</button>
     <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
   </form>
 </template>

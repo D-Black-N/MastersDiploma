@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>{{ $t('auth.name') }}</h2>
     <LoginForm />
   </div>
 </template>
