@@ -2,19 +2,42 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Импортируем маршруты
 import authRoutes from '@/features/Auth/routes/authRoutes';
+import { useAuthStore } from '@/features/Auth/stores/useAuthStore';
+import NotFound from '@/shared/components/NotFound.vue';
+import AuthLayout from '@/layouts/AuthLayout.vue';
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
 
 // Собираем все маршруты
 const routes = [
-  ...authRoutes,
+  // Для layout авторизации
   {
-    path: '/:pathMatch(.*)*', // Обработка 404
-    component: () => import('@/shared/components/NotFound.vue'),
+    path: '/login',
+    component: AuthLayout,
+    children: [...authRoutes]
   },
+  // Для авторизованных пользователей
+  {
+    path: '/',
+    component: DefaultLayout,
+    meta: { requiredAuth: true },
+    children: []
+  },
+  { path: '/:pathMatch(.*)*', component: NotFound } // Обработка 404
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+// Защита маршрутов
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+  if (to.meta.requiredAuth && !authStore.isAuthenticated) {
+    next({ name: 'Login' });
+  } else {
+    next();
+  }
 });
 
 export default router;
