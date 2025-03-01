@@ -1,20 +1,20 @@
 <template>
   <div class="requests-container">
     <div class="requests-header">
-      <h2>Заявки</h2>
+      <h2>{{ $t('requests.many') }}</h2>
       <SubmitInput type="button" :value="$t('requests.buttons.create')" @click="onClick" />
     </div>
-    <Table :data="this.data" link-path="request" locale-path="requests.model.fields" />
+    <TableList :data="this.data" link-path="request" locale-path="requests.model.fields" />
   </div>
 </template>
 
 <script>
 import SubmitInput from '@/shared/components/input/SubmitInput.vue';
-import Table from '@/shared/components/tables/Table.vue'
+import TableList from '@/shared/components/tables/TableList.vue'
 
 export default {
   components: {
-    Table,
+    TableList,
     SubmitInput
   },
 
@@ -22,23 +22,9 @@ export default {
     return {
       data: [
         { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
-        { id: 1, name: 'Test', value: 'Test' },
+        { id: 2, name: 'Test', value: 'Test' },
+        { id: 3, name: 'Test', value: 'Test' },
+        { id: 4, name: 'Test', value: 'Test' },
       ]
     }
   },

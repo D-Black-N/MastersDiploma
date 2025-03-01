@@ -3,7 +3,6 @@
     <label :for="id" :class="{ required: this.required }">{{ label }}</label>
     <input :type :id :required :placeholder
       :value="modelValue"
-      @invalid="handleInvalid"
       @input="$emit('update:modelValue', $event.target.value)" />
   </div>
 </template>

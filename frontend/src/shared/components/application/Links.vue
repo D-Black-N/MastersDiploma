@@ -1,6 +1,6 @@
 <template>
   <div class="page-links">
-    <router-link class="link" to="/requests">{{ 'Requests' }}</router-link>
+    <router-link class="link" to="/requests">{{ $t('requests.list') }}</router-link>
     <router-link class="link" to="/clients">{{ 'Clients' }}</router-link>
     <router-link class="link" to="/admin">{{ 'Admin' }}</router-link>
   </div>

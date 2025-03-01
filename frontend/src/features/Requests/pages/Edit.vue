@@ -2,23 +2,28 @@
   <div class="request-page">
     <div class="request-header">
       <h2>{{ $t('requests.one') + "#" + request.id }}</h2>
-      <SubmitInput type="button" :value="$t('requests.buttons.edit')" @click="onClick" />
+      <div class="right-buttons">
+        <SubmitInput type="button" :value="$t('requests.buttons.discard')" @click="handleDiscard" style="margin: 0px 10px" />
+        <SubmitInput type="button" :value="$t('requests.buttons.save')" @click="onClick" />
+      </div>
     </div>
     <table>
       <tr v-for="field in fields">
         <td>{{ $t(`requests.model.fields.${field}`) }}</td>
-        <td>{{ request[field] }}</td>
+        <td><InputField type="text" v-model="request[field]" /></td>
       </tr>
     </table>
   </div>
 </template>
 
 <script>
+import InputField from '@/shared/components/input/InputField.vue';
 import SubmitInput from '@/shared/components/input/SubmitInput.vue';
 
 export default {
   components: {
-    SubmitInput
+    SubmitInput,
+    InputField
   },
 
   data() {
@@ -38,8 +43,17 @@ export default {
   },
 
   methods: {
-    onClick() {
-      this.$router.push(`/request/${this.request.id}/edit`)
+    toShow() {
+      this.$router.push(`/request/${this.request.id}`)
+    },
+
+    handleSave() {
+      // Еще логику добавить
+      this.toShow
+    },
+
+    handleDiscard() {
+      this.toShow
     }
   }
 }
@@ -60,5 +74,17 @@ export default {
 .request-page .request-header {
   display: flex;
   justify-content: space-between;
+}
+
+td .text-input {
+  padding-bottom: 0px;
+}
+
+.request-header .right-buttons {
+  display: flex;
+}
+
+.request-page table {
+  padding-bottom: 20px;
 }
 </style>
