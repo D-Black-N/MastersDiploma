@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router';
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    user: null,
+    user: { email: 'test@test.ru' },
   }),
 
   getters: {
@@ -13,7 +13,7 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     async login(form) {
       // Здесь прописать логику работы с авторизацией
-      if (email === 'admin@example.com' && password === 'password') {
+      if (form.email === 'admin@example.com' && form.password === 'password') {
         this.user = { email };
         const router = useRouter();
         router.push('/dashboard');

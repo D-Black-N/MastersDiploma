@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Импортируем маршруты
 import authRoutes from '@/features/Auth/routes/authRoutes';
 import { useAuthStore } from '@/features/Auth/stores/useAuthStore';
-import NotFound from '@/shared/components/NotFound.vue';
+import NotFound from '@/shared/pages/NotFound.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 

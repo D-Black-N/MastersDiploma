@@ -1,24 +1,25 @@
 <template>
   <div class="app-container">
+    <Header />
+    <div class="main">
+    </div>
   </div>
 </template>
 
-<script setup>
+<script>
+import Header from '@/shared/components/application/Header.vue'
 
+export default {
+  components: {
+    Header
+  }
+}
 </script>
 
 <style scoped>
 .app-container {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.content {
-  display: flex;
-  flex-grow: 1;
-}
-main {
-  flex-grow: 1;
-  padding: 20px;
+  width: 100vw;
+  min-height: 100vh;
 }
 </style>
