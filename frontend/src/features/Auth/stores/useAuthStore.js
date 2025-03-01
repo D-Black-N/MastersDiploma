@@ -5,11 +5,13 @@ export const useAuthStore = defineStore('auth', {
   state: () => ({
     user: null,
   }),
+
   getters: {
     isAuthenticated: (state) => !!state.user,
   },
+
   actions: {
-    async login(email, password) {
+    async login(form) {
       // Здесь прописать логику работы с авторизацией
       if (email === 'admin@example.com' && password === 'password') {
         this.user = { email };
@@ -19,6 +21,7 @@ export const useAuthStore = defineStore('auth', {
         throw new Error('Invalid credentials');
       }
     },
+
     logout() {
       this.user = null;
       const router = useRouter();

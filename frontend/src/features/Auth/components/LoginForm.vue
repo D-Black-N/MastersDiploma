@@ -1,46 +1,91 @@
 <template>
-  <form @submit.prevent="login">
-    <div class="input-group">
-      <label for="email">{{ $t('auth.login') }}:</label>
-      <input type="email" id="email" v-model="email" required />
+  <form class="login-form" @submit.prevent="login">
+    <h2>{{ $t('auth.name') }}</h2>
+    <p class="error">{{ errorMessage }}</p>
+    <InputField type="text" :label="$t('auth.login')" v-model="form.login" required />
+    <InputField type="password" :label="$t('auth.password')" v-model="form.password" required />
+    <div class="buttons">
+      <SubmitInput :value="$t('auth.forgot_password')" :disabled="this.loading" type="button" />
+      <SubmitInput :value="$t('auth.sign_in')" :disabled="this.loading" type="submit" />
     </div>
-    <div class="input-group">
-      <label for="password">{{ $t('auth.password') }}:</label>
-      <input type="password" id="password" v-model="password" required />
-    </div>
-    <button type="submit" :disabled="loading">{{ $t('auth.sign_in') }}</button>
-    <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
   </form>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script>
 import { useAuthStore } from '../stores/useAuthStore';
+import SubmitInput from '@/shared/components/input/SubmitInput.vue';
+import InputField from '@/shared/components/input/InputField.vue';
 
-const email = ref('');
-const password = ref('');
-const authStore = useAuthStore();
-const loading = ref(false);
-const errorMessage = ref('');
+export default {
+  components: {
+    InputField,
+    SubmitInput
+  },
 
-const login = async () => {
-  loading.value = true;
-  errorMessage.value = '';
-  try {
-    await authStore.login(email.value, password.value);
-  } catch (error) {
-    errorMessage.value = 'Invalid email or password';
-  } finally {
-    loading.value = false;
+  data() {
+    return {
+      form: {
+        login: "",
+        password: ""
+      },
+      errorMessage: "",
+      loading: false
+    }
+  },
+
+  methods: {
+    async login() {
+      const authStore = useAuthStore();
+
+      this.loading = true;
+      this.errorMessage = '';
+
+      try {
+        await authStore.login(this.form);
+      } catch (error) {
+        this.errorMessage = "Invalid email or password";
+        setTimeout(() => { this.errorMessage = "" }, 5000)
+      } finally {
+        this.form = { login: "", password: "" }
+        this.loading = false;
+      }
+    }
   }
-};
+}
+// const login = async () => {
+
+
+
+// };
 </script>
 
 <style scoped>
-.input-group {
+.login-form {
+  background: #ffffff30;
+  width: 40%;
+  min-width: 300px;
+  border-radius: 30px;
+  height: 400px;
+  margin-top: 5%;
+}
+
+.login-form h2 {
+  font-size: 32px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: #484889;
+}
+
+.login-form p {
+  height: 10px;
+  color: red;
   margin-bottom: 10px;
 }
-.error {
-  color: red;
+
+.login-form .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 22%;
+  margin-top: 20px;
 }
 </style>
