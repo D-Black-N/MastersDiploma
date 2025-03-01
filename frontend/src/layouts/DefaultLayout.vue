@@ -2,6 +2,7 @@
   <div class="app-container">
     <Header />
     <div class="main">
+      <router-view />
     </div>
   </div>
 </template>
@@ -19,7 +20,15 @@ export default {
 <style scoped>
 .app-container {
   display: flex;
+  flex-flow: column;
   width: 100vw;
   min-height: 100vh;
+}
+
+.app-container .main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 </style>

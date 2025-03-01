@@ -3,11 +3,13 @@ import { createI18n } from 'vue-i18n';
 // Загрузка локализаций срезов из features
 import generalRU from './ru.json'
 import authRU from '@/features/Auth/i18n/ru'
+import requestsRU from '@/features/Requests/i18n/ru'
 
 const messages = {
   ru: {
     ...generalRU,
     ...authRU,
+    ...requestsRU,
   },
 };
 

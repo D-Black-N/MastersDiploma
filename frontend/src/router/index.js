@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Импортируем маршруты
 import authRoutes from '@/features/Auth/routes/authRoutes';
+import requestsRoutes from '@/features/Requests/routes/requestsRoutes';
 import { useAuthStore } from '@/features/Auth/stores/useAuthStore';
 import NotFound from '@/shared/pages/NotFound.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
@@ -20,7 +21,7 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     meta: { requiredAuth: true },
-    children: []
+    children: [...requestsRoutes]
   },
   { path: '/:pathMatch(.*)*', component: NotFound } // Обработка 404
 ];
