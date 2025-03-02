@@ -2,13 +2,14 @@
   <table class="requests-list">
     <tr class="requests-list-header">
       <th class="cell-id">{{ $t('requests.model.fields.id') }}</th>
+      <th>{{ $t('requests.model.fields.vehicle') }}</th>
       <th>{{ $t('requests.model.fields.client') }}</th>
       <th>{{ $t('requests.model.fields.user') }}</th>
       <th>{{ $t('requests.model.fields.status') }}</th>
-      <th></th>
     </tr>
     <tr v-for="request in requests" class="requests-list-body">
       <td class="cell-id"><router-link :to="`/request/${request.id}`">#{{ request.id }}</router-link></td>
+      <td>{{ request.vehicle }}</td>
       <td>{{ request.client }}</td>
       <td>{{ request.user }}</td>
       <td>{{ request.status }}</td>
@@ -26,10 +27,10 @@ export default {
 
 <style>
 .requests-list {
-  border-collapse: collapse;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
+  border-collapse: collapse;
 }
 
 .requests-list-header {
