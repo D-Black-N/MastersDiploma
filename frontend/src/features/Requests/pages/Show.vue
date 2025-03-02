@@ -1,44 +1,41 @@
 <template>
-  <div class="request-page">
-    <div class="request-header">
-      <h2>{{ $t('requests.one') + "#" + request.id }}</h2>
-      <SubmitInput type="button" :value="$t('requests.buttons.edit')" @click="onClick" />
-    </div>
-    <table>
-      <tr v-for="field in fields">
-        <td>{{ $t(`requests.model.fields.${field}`) }}</td>
-        <td>{{ request[field] }}</td>
-      </tr>
-    </table>
+  <div class="request-show-page">
+    <RequestHeader :header="$t('requests.pages.show', { id: request.id })" :buttons="headerButtons" />
+    <RequestShow :request="request" />
   </div>
 </template>
 
 <script>
-import SubmitInput from '@/shared/components/input/SubmitInput.vue';
+import RequestHeader from '../components/RequestHeader.vue';
+import RequestShow from '../components/RequestShow.vue';
 
 export default {
   components: {
-    SubmitInput
+    RequestHeader,
+    RequestShow,
   },
 
   data() {
     return {
       request: {
         id: 1,
-        name: "test",
-        value: "Test"
-      }
-    }
-  },
-
-  computed: {
-    fields() {
-      return Object.keys(this.request).filter(field => field !== "id")
+        client: { id: 1, full_name: "Насибуллин Данил" },
+        user: { id: 1, full_name: "Иванов Иван" },
+        status: "Status",
+        leasing_term: { value: 12, type: "month" },
+        payment_type: "cash",
+        conditions: {},
+        verification_result: "approved",
+        vehicle: { id: 1, brand: "BMW", model: "M5", vin: "111111111" },
+      },
+      headerButtons: [
+        { type: "button", id: "edit", value: "requests.buttons.edit", disabled: false, action: this.handleClick },
+      ]
     }
   },
 
   methods: {
-    onClick() {
+    handleClick() {
       this.$router.push(`/request/${this.request.id}/edit`)
     }
   }
@@ -46,19 +43,8 @@ export default {
 </script>
 
 <style>
-.request-page {
+.request-show-page {
   width: 90%;
   padding-top: 50px;
-}
-
-.request-page h2 {
-  font-size: 36px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.request-page .request-header {
-  display: flex;
-  justify-content: space-between;
 }
 </style>

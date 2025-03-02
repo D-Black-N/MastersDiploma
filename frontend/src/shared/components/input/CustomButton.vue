@@ -1,7 +1,5 @@
 <template>
-  <div class="submit-input">
-    <input :type :id :value :disabled />
-  </div>
+  <input class="custom-button" :type :id :value :disabled />
 </template>
 
 <script>
@@ -16,7 +14,7 @@ export default {
 </script>
 
 <style>
-.submit-input input {
+.custom-button {
   height: 40px;
   border: none;
   border-radius: 20px;
@@ -24,16 +22,16 @@ export default {
   color: #484889;
   font-weight: bold;
   font-size: 16px;
-  padding: 0px 10px;
   min-width: 150px;
+  margin: 10px;
 }
 
-.submit-input input:hover {
+.custom-button:hover {
   cursor: pointer;
   background: #E8662F;
 }
 
-.submit-input input:disabled {
+.custom-button:disabled {
   cursor: default;
   background: #E8662F80;
 }

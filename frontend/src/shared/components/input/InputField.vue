@@ -1,10 +1,11 @@
 <template>
-  <div class="text-input">
-    <label :for="id" :class="{ required: this.required }">{{ label }}</label>
-    <input :type :id :required :placeholder
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)" />
-  </div>
+  <input :type
+         :id
+         :required
+         :placeholder
+         :value="modelValue"
+         class="input-field"
+         @input="$emit('update:modelValue', $event.target.value)" />
 </template>
 
 <script>
@@ -22,34 +23,21 @@ export default {
 </script>
 
 <style>
-.text-input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 30px;
-  gap: 5px;
-}
-
-.text-input label {
-  color: #484889;
-  font-weight: bold;
+.input-field {
+  padding: 10px;
   font-size: 16px;
-  width: 50%;
-  text-align: left;
-}
-
-.text-input input {
+  margin: 20px 10px;
+  width: 400px;
   border: none;
-  border-radius: 2px;
-  width: 50%;
-  font-size: 16px;
-  padding: 10px 20px;
+  background: none;
+  border-bottom: 2px solid #484889;
 }
 
-.text-input label.required::after {
-  content: "*";
-  color: #f41212;
-  font-size: 1em;
+.input-field:focus {
+  outline: none;
+}
+
+.input-field:hover {
+  border-bottom: 2px solid #1d1d67;
 }
 </style>

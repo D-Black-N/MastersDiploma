@@ -1,90 +1,55 @@
 <template>
-  <div class="request-page">
-    <div class="request-header">
-      <h2>{{ $t('requests.one') + "#" + request.id }}</h2>
-      <div class="right-buttons">
-        <SubmitInput type="button" :value="$t('requests.buttons.discard')" @click="handleDiscard" style="margin: 0px 10px" />
-        <SubmitInput type="button" :value="$t('requests.buttons.save')" @click="onClick" />
-      </div>
-    </div>
-    <table>
-      <tr v-for="field in fields">
-        <td>{{ $t(`requests.model.fields.${field}`) }}</td>
-        <td><InputField type="text" v-model="request[field]" /></td>
-      </tr>
-    </table>
+  <div class="request-edit-page">
+    <RequestHeader :header="$t('requests.pages.edit')" :buttons="headerButtons" />
+    <RequestForm :request="request" />
   </div>
 </template>
 
 <script>
-import InputField from '@/shared/components/input/InputField.vue';
-import SubmitInput from '@/shared/components/input/SubmitInput.vue';
+import RequestForm from '../components/RequestForm.vue';
+import RequestHeader from '../components/RequestHeader.vue';
 
 export default {
   components: {
-    SubmitInput,
-    InputField
+    RequestHeader,
+    RequestForm
   },
 
   data() {
     return {
       request: {
         id: 1,
-        name: "test",
-        value: "Test"
-      }
-    }
-  },
-
-  computed: {
-    fields() {
-      return Object.keys(this.request).filter(field => field !== "id")
+        client: { id: 1, full_name: "Насибуллин Данил" },
+        user: { id: 1, full_name: "Иванов Иван" },
+        status: "Status",
+        leasing_term: { value: 12, type: "month" },
+        payment_type: "cash",
+        conditions: {},
+        verification_result: "approved",
+        vehicle: { id: 1, brand: "BMW", model: "M5", vin: "111111111" },
+      },
+      headerButtons: [
+        { type: "button", id: "discard", value: "requests.buttons.discard", disabled: false, action: this.handleDiscard },
+        { type: "button", id: "save", value: "requests.buttons.save", disabled: false, action: this.handleSubmit },
+      ]
     }
   },
 
   methods: {
-    toShow() {
+    handleDiscard() {
       this.$router.push(`/request/${this.request.id}`)
     },
 
-    handleSave() {
-      // Еще логику добавить
-      this.toShow
-    },
-
-    handleDiscard() {
-      this.toShow
+    handleSubmit() {
+      this.$router.push(`/request/${this.request.id}`)
     }
   }
 }
 </script>
 
 <style>
-.request-page {
+.request-edit-page {
   width: 90%;
   padding-top: 50px;
-}
-
-.request-page h2 {
-  font-size: 36px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.request-page .request-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-td .text-input {
-  padding-bottom: 0px;
-}
-
-.request-header .right-buttons {
-  display: flex;
-}
-
-.request-page table {
-  padding-bottom: 20px;
 }
 </style>

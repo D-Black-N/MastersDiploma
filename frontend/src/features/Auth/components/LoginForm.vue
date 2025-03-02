@@ -2,8 +2,8 @@
   <form class="login-form" @submit.prevent="login">
     <h2>{{ $t('auth.name') }}</h2>
     <p class="error">{{ errorMessage }}</p>
-    <InputField type="text" :label="$t('auth.login')" v-model="form.login" required />
-    <InputField type="password" :label="$t('auth.password')" v-model="form.password" required />
+    <InputField type="text" :placeholder="$t('auth.login')" v-model="form.login" required />
+    <InputField type="password" :placeholder="$t('auth.password')" v-model="form.password" required />
     <div class="buttons">
       <SubmitInput :value="$t('auth.forgot_password')" :disabled="this.loading" type="button" />
       <SubmitInput :value="$t('auth.sign_in')" :disabled="this.loading" type="submit" />
@@ -13,13 +13,13 @@
 
 <script>
 import { useAuthStore } from '../stores/useAuthStore';
-import SubmitInput from '@/shared/components/input/SubmitInput.vue';
+// import SubmitInput from '@/shared/components/input/SubmitInput.vue';
 import InputField from '@/shared/components/input/InputField.vue';
 
 export default {
   components: {
     InputField,
-    SubmitInput
+    // SubmitInput
   },
 
   data() {
