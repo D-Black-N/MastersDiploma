@@ -3,12 +3,12 @@
     <table>
       <tr>
         <td class="label">{{ $t('requests.model.fields.vehicle') }}</td>
-        <td><SelectField id="select-vehicle" :options="this.vehicles" /></td>
+        <td><SelectField id="select-vehicle" :options="this.vehicles" v-model="request.vehicle.id" /></td>
       </tr>
       <tr>
         <td class="label">{{$t('requests.model.fields.client') }}</td>
-        <td><SelectField id="select-client" :options="this.vehicles" /></td>
-        <td><CustomButton type="button" :value="$t('requests.buttons.create')"/></td>
+        <td><SelectField id="select-client" :options="this.clients" v-model="request.client.id" /></td>
+        <td><CustomButton type="button" :value="$t('requests.buttons.create')" @click="handleCreateClient"/></td>
       </tr>
       <tr>
         <td class="label">{{ $t('requests.model.fields.leasing_term') }}</td>
@@ -44,7 +44,14 @@ export default {
 
   data() {
     return {
-      vehicles: [{ id: 1, name: "BMW" }, { id: 2, name: "Mercedes" }]
+      vehicles: [{ id: 1, name: "BMW" }, { id: 2, name: "Mercedes" }],
+      clients: [{ id: 1, name: 'Насибуллин Данил' }, { id: 2, name: 'Иван Иванов' }]
+    }
+  },
+
+  methods: {
+    handleCreateClient() {
+      this.$router.push(`/clients/new`)
     }
   }
 }

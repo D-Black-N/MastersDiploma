@@ -1,7 +1,7 @@
 <template>
-  <select :name :id class="select-input" @select="onSelect">
+  <select :name :id class="select-input" :value="modelValue">
     <option value="">{{ placeholder }}</option>
-    <option v-for="option in options" :value="option.value">{{ option.name }}</option>
+    <option v-for="option in options" :value="option.id">{{ option.name }}</option>
   </select>
 </template>
 
@@ -9,18 +9,11 @@
 export default {
   props: {
     id: String,
-    label: String,
     options: Object,
     required: Boolean,
-    modelValue: String,
+    modelValue: Number,
     placeholder: String,
   },
-
-  methods: {
-    onSelect() {
-
-    }
-  }
 }
 </script>
 

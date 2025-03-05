@@ -27,6 +27,7 @@ export default {
         conditions: {},
         verification_result: "approved",
         vehicle: { id: 1, brand: "BMW", model: "M5", vin: "111111111" },
+        comment: 'aaaaa'
       },
       headerButtons: [
         { type: "button", id: "discard", value: "requests.buttons.discard", disabled: false, action: this.handleDiscard },
