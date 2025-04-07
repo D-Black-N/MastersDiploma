@@ -9,8 +9,35 @@ services:
       - /app/node_modules
     command: npm run serve
     ports:
-      - "8080:8080"
+      - 8080:8080
     environment:
       - CHOKIDAR_USEPOLLING=true
+
+  backend:
+    build: backend/
+    container_name: verification-backend
+    volumes:
+      - ./backend:/app:cached
+      - ./backend/tmp/:/app/tmp:cached
+      - bundle_path:/usr/local/bundle
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
     stdin_open: true
     tty: true
+
+  db:
+    image: postges:16.0
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./backend/persistence/postgres:/var/lib/postgresql/data/pgdata:delegated
+    ports:
+      - 45432:5432
+
+volumes:
+  bundle_path:
