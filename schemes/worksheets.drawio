@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.14" pages="4">
-  <diagram name="Лист1" id="x5ziAsaNnClO4zRs3F9P">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.14" pages="5">
+  <diagram name="Лист 1" id="x5ziAsaNnClO4zRs3F9P">
     <mxGraphModel dx="4007" dy="2617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -421,7 +421,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eJupjWPiDXdbwRNi5G2d" name="Лист2">
+  <diagram id="eJupjWPiDXdbwRNi5G2d" name="Лист 2">
     <mxGraphModel dx="3434" dy="2243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -2065,6 +2065,14 @@
         <mxCell id="0dmwXzPr0bCF51oKMAte-173" value="Формы интерфейса" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=80;fontStyle=2" vertex="1" parent="1">
           <mxGeometry x="1980" y="80" width="1130" height="110" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="vcGLNT976-JFcX91LmkE" name="Лист 5">
+    <mxGraphModel dx="1202" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
