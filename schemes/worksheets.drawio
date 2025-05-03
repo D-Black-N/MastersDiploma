@@ -6606,7 +6606,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="XkfIxLeJNzERTYlqrOvQ" name="Лист 9">
-    <mxGraphModel dx="4808" dy="3140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="4007" dy="2617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6852,6 +6852,9 @@
         </mxCell>
         <mxCell id="NuqqAe-uGLpWwX2f--SG-50" value="&lt;font face=&quot;GOST type A&quot;&gt;&lt;i&gt;Гуренко В.В.&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="NuqqAe-uGLpWwX2f--SG-1">
           <mxGeometry x="2551.1769999999997" y="2202.747" width="90.55" height="18.11" as="geometry" />
+        </mxCell>
+        <mxCell id="0-Q1KACQ8OTRVZCJGH3U-1" value="Диаграммы процесса использования системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=80;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="1037.57" y="60" width="1294.95" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
