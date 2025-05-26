@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.0.6" pages="14">
   <diagram name="Лист 1" id="x5ziAsaNnClO4zRs3F9P">
-    <mxGraphModel dx="6010" dy="3930" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="4007" dy="2620" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,52 +8,16 @@
           <mxGeometry x="552.56" y="60" width="2264.96" height="80" as="geometry" />
         </mxCell>
         <mxCell id="kFYverO4tarZtgFE3sbo-52" value="Цель работы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="2400" y="200" width="500" height="80" as="geometry" />
+          <mxGeometry x="2400" y="236.22" width="500" height="80" as="geometry" />
         </mxCell>
         <mxCell id="kFYverO4tarZtgFE3sbo-53" value="Основные решаемые задачи" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="650" y="140" width="880" height="80" as="geometry" />
+          <mxGeometry x="650" y="236.22" width="880" height="80" as="geometry" />
         </mxCell>
         <mxCell id="kFYverO4tarZtgFE3sbo-54" value="Схема структурная программной системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="450" y="1407.48" width="1050" height="80" as="geometry" />
+          <mxGeometry x="480" y="1299.21" width="1050" height="80" as="geometry" />
         </mxCell>
         <mxCell id="T2wAmyGa9oW7oR2WTVt0-1" value="&lt;font style=&quot;line-height: 150%;&quot;&gt;Программная система верификации лизинговой документации, предназначенная для извлечения и автоматизированной обработки данных из документов в области лизинга, а также для верификации этих документов.&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=40;fontStyle=2;" parent="1" vertex="1">
-          <mxGeometry x="2130" y="320" width="1150" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-26" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="170" y="265.75" width="1880" height="1120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-14" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;1. Анализ предметной области: изучение бизнес-процессов лизинговых компаний, выявление узких мест, сбор информации о различных типах лизинговых документов.&amp;nbsp; Определение основных аспектов задачи верификации лизинговой документации.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="-40" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-15" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;2. Аналитический обзор методов и инструментов верификации документов с учетом технологий автоматизированной верификации.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="80" width="1840.83" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;3. Разработка гибридной модели извлечения и верификации данных из лизинговых документов. Обучение полученной модели. Определение метрик составных частей гибридной модели и расчет их значений.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="200" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-17" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;4. Анализ требований технического задания с точки зрения выбранной технологии и уточнение требований к программной системе: техническим средствам, внешним интерфейсам, а также к надежности и безопасности.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="320" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-18" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;5. Обоснование выбора архитектуры программной системы и используемых технологий разработки, проектирование структуры программной системы.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="440" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-19" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;6. Разработка пользовательского интерфейса.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="560" width="1840.8333333333333" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-20" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;7. Определение используемых алгоритмов машинного обучения для классификации лизинговых документов.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="640" width="1840.8333333333333" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-21" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;8. Разработка гибридной модели для классификации и верификации лизинговых документов&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic;&quot;&gt;и извлечения из&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic;&quot;&gt;них атрибутов&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic;&quot;&gt;и&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic;&quot;&gt;таблиц.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="720" width="1840.83" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-22" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;9. Реализация компонентов программной системы с использованием выбранных инструментальных средств и их автономное тестирование.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="840" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-23" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;10. Сборка программных компонентов в единую систему и ее комплексное тестирование, включая оценочное тестирование удобства использования.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="960" width="1840.8333333333333" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bviNZhVmhnk4O0c2a_4F-24" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;11. Разработка технологии использования системы.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="bviNZhVmhnk4O0c2a_4F-26" vertex="1">
-          <mxGeometry y="1080" width="1880" height="80" as="geometry" />
+          <mxGeometry x="2125.98" y="403.54" width="1150" height="200" as="geometry" />
         </mxCell>
         <mxCell id="y5ShYPYadqOF-uwj8ruL-1" value="Место системы в бизнес-процессе лизинга" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
           <mxGeometry x="2214.56" y="679.13" width="953.81" height="80" as="geometry" />
@@ -296,7 +260,7 @@
           <mxGeometry x="2740.16" y="2084.28" width="471.84" height="59" as="geometry" />
         </mxCell>
         <mxCell id="Ec5ij6jtgKH2UX9K4Sx4-4" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="2040" y="777.5600000000001" width="1170" height="1033.85" as="geometry" />
+          <mxGeometry x="2037.9" y="826.7700000000001" width="1170" height="1033.85" as="geometry" />
         </mxCell>
         <mxCell id="y5ShYPYadqOF-uwj8ruL-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;fillColor=none;strokeWidth=1.5748;" parent="Ec5ij6jtgKH2UX9K4Sx4-4" vertex="1">
           <mxGeometry x="260" width="910" height="796.38" as="geometry" />
@@ -525,7 +489,7 @@
           <mxGeometry x="980" y="833.8499999999999" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ec5ij6jtgKH2UX9K4Sx4-5" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="98.42" y="1505.9" width="2342.52" height="757.8699999999999" as="geometry" />
+          <mxGeometry x="137.8" y="1417.3200000000002" width="2342.52" height="757.8699999999999" as="geometry" />
         </mxCell>
         <mxCell id="Ec5ij6jtgKH2UX9K4Sx4-1" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeWidth=1.5748;fontFamily=GOST type A;fontSize=25;" edge="1" parent="Ec5ij6jtgKH2UX9K4Sx4-5" source="kFYverO4tarZtgFE3sbo-65">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -694,6 +658,33 @@
             <mxPoint x="694.5699999999999" y="485" as="sourcePoint" />
             <mxPoint x="697.58" y="440.0999999999999" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rhYDjQXQnRQysVVXjgVb-2" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="157.48" y="403.54" width="1880.42" height="795.98" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-14" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;1. Анализ предметной области: изучение бизнес-процессов лизинговых компаний, выявление узких мест, сбор информации о различных типах лизинговых документов.&amp;nbsp; Определение основных аспектов задачи верификации лизинговой документации.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" width="1840.8333333333333" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-15" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;2. Аналитический обзор подходов и инструментов автоматизированной верификации документов&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" y="120" width="1840.83" height="77.48" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;4. Разработка гибридной модели обработки и верификации лизинговых документов. Обучение полученной модели. Определение метрик составных частей гибридной модели и расчет их значений.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="2.842170943040401e-14" y="275.97999999999996" width="1840.8333333333333" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-18" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;5. Обоснование выбора архитектуры программной системы и используемых технологий разработки, проектирование структуры программной системы.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" y="395.98" width="1840.8333333333333" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-19" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;6. Разработка пользовательского интерфейса.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" y="515.98" width="1840.8333333333333" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-20" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;3 Определение используемых алгоритмов машинного обучения для классификации лизинговых документов.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" y="197.48000000000002" width="1840.83" height="78.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-22" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;7. Реализация компонентов программной системы с использованием выбранных инструментальных средств. Сборка программных компонентов в единую систему и ее комплексное тестирование, включа оценочное тестирование удобства использования.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry y="595.98" width="1840.8333333333333" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bviNZhVmhnk4O0c2a_4F-24" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;8. Разработка технологии использования системы.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="rhYDjQXQnRQysVVXjgVb-2" vertex="1">
+          <mxGeometry x="0.4200000000000159" y="715.98" width="1880" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -8864,7 +8855,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="XkfIxLeJNzERTYlqrOvQ" name="Лист 9">
-    <mxGraphModel dx="4808" dy="3144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="6010" dy="3930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8875,7 +8866,7 @@
           <mxGeometry x="220" y="200" width="592.43" height="110" as="geometry" />
         </mxCell>
         <mxCell id="SLKJymaxZGSe5SzFDYfD-159" value="Процесс проверки заявки" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="1315" y="190" width="670" height="110" as="geometry" />
+          <mxGeometry x="1315" y="200" width="670" height="110" as="geometry" />
         </mxCell>
         <mxCell id="SLKJymaxZGSe5SzFDYfD-205" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="160" y="310" width="720" height="1020" as="geometry" />
@@ -9448,10 +9439,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SLKJymaxZGSe5SzFDYfD-288" value="Процесс авторизации" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="2400" y="1090" width="740" height="110" as="geometry" />
+          <mxGeometry x="2400" y="1220" width="740" height="110" as="geometry" />
         </mxCell>
         <mxCell id="SLKJymaxZGSe5SzFDYfD-321" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="2440" y="1200" width="600" height="550" as="geometry" />
+          <mxGeometry x="2440" y="1330" width="600" height="550" as="geometry" />
         </mxCell>
         <mxCell id="SLKJymaxZGSe5SzFDYfD-291" value="&lt;font style=&quot;font-size: 25px;&quot; face=&quot;GOST type A&quot;&gt;&lt;i&gt;Пользователь&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="SLKJymaxZGSe5SzFDYfD-321" vertex="1">
           <mxGeometry x="40" y="20" width="240" height="30" as="geometry" />
@@ -10239,8 +10230,8 @@
         <mxCell id="xqfXcvISt7I1PXwbH9hj-51" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;Программная система верификации лизинговой документации&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontStyle=2;fontSize=25;" vertex="1" parent="xqfXcvISt7I1PXwbH9hj-1">
           <mxGeometry x="2740.16" y="2084.28" width="471.84" height="59" as="geometry" />
         </mxCell>
-        <mxCell id="lxcVI6G0HYGqy6htY_ue-1" value="&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;b&gt;Особенности проверки заявок:&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1. В случае отсутствия скан-копий документов в системе необходимо их приложить.&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2. Если документы были приложены и по ним была выполнена проверка, то автоматически возможен просмотр результатов.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;3. Если результаты проверки неудовлетворительные, то необходимо назначить заявку риск-менеджеру.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;4. В зависимости от полученных данных, риск-менеджер принимает решение по заявке и отправляет их в систему.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;5. Получив уведомление, менеджер просматривает результаты и сообщает их клиенту.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=30;fontStyle=2" vertex="1" parent="1">
-          <mxGeometry x="1037.57" y="1930" width="1472.43" height="350" as="geometry" />
+        <mxCell id="lxcVI6G0HYGqy6htY_ue-1" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;Особенности проверки заявок&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;1. В случае отсутствия скан-копий документов в системе необходимо их приложить.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;2. Если документы были приложены и по ним была выполнена проверка, то автоматически возможен просмотр результатов.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;3. Если результаты проверки неудовлетворительные, то необходимо назначить заявку риск-менеджеру.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;4. В зависимости от полученных данных, риск-менеджер принимает решение по заявке и отправляет их в систему.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 35px; line-height: 150%;&quot;&gt;5. Получив уведомление, менеджер просматривает результаты и сообщает их клиенту.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=30;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="960" y="1910" width="1560" height="370" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -10254,85 +10245,10 @@
           <mxGeometry x="1031.85" y="60" width="1302.43" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cId5zT9Gh37Se6SOhOg0-2" value="Диаграмма развертывания программной системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="300" y="160" width="1040" height="80" as="geometry" />
+          <mxGeometry x="400" y="240" width="1040" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cId5zT9Gh37Se6SOhOg0-4" value="Выводы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
-          <mxGeometry x="2220" y="160" width="190" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="rk7dsDZR8d2DrV0-smFm-6" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="230" y="320" width="1090" height="850" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-6" value="RabbitMQ" style="verticalAlign=middle;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="rk7dsDZR8d2DrV0-smFm-6" vertex="1">
-          <mxGeometry x="560" y="620" width="210" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-8" value="База данных" style="verticalAlign=middle;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="rk7dsDZR8d2DrV0-smFm-6" vertex="1">
-          <mxGeometry x="880" y="165" width="210" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-6" value="" style="group" parent="rk7dsDZR8d2DrV0-smFm-6" vertex="1" connectable="0">
-          <mxGeometry y="480" width="470" height="370" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-7" value="Гибридная модель МО" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
-          <mxGeometry width="470" height="370" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-1" value="Модель классификации документов" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
-          <mxGeometry x="15" y="60" width="205" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-2" value="Модель распознавания именованных сущностей" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
-          <mxGeometry x="15" y="200" width="205" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-4" value="Модель распознавания таблиц" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
-          <mxGeometry x="240" y="60" width="205" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-5" value="Модель верификации документов" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
-          <mxGeometry x="240" y="210" width="205" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-7" value="" style="group" parent="rk7dsDZR8d2DrV0-smFm-6" vertex="1" connectable="0">
-          <mxGeometry x="130" y="110" width="210" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="0-iVg1RCnTKMaK7Gy46d-2" value="Браузер пользователя" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-7" vertex="1">
-          <mxGeometry width="210" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-2" value="Интерфейс системы" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-7" vertex="1">
-          <mxGeometry x="20" y="110" width="160" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-8" value="" style="group" parent="rk7dsDZR8d2DrV0-smFm-6" vertex="1" connectable="0">
-          <mxGeometry x="560" width="210" height="430" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-3" value="Сервер приложения" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
-          <mxGeometry width="210" height="430" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-9" value="Слой контроля доступа" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
-          <mxGeometry x="20" y="90" width="165" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="1tEjjia0BTDTh7AbYEc9-10" value="Слой бизнес-логики" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
-          <mxGeometry x="20" y="230" width="165" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="q3dtxIVGsu_f9Qy2fP7t-1" value="Слой работы с сервисами" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
-          <mxGeometry x="20" y="330" width="165" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="6sha8AjKCExH68ELcRU6-9" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=220;entryDy=210;entryPerimeter=0;" parent="rk7dsDZR8d2DrV0-smFm-6" target="1tEjjia0BTDTh7AbYEc9-3" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="340" y="220" as="sourcePoint" />
-            <mxPoint x="530" y="300" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rk7dsDZR8d2DrV0-smFm-3" value="" style="endArrow=none;html=1;rounded=0;" parent="rk7dsDZR8d2DrV0-smFm-6" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="770" y="220" as="sourcePoint" />
-            <mxPoint x="880" y="220" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rk7dsDZR8d2DrV0-smFm-4" value="" style="endArrow=none;html=1;rounded=0;" parent="rk7dsDZR8d2DrV0-smFm-6" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="660" y="430" as="sourcePoint" />
-            <mxPoint x="660" y="620" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rk7dsDZR8d2DrV0-smFm-5" value="" style="endArrow=none;html=1;rounded=0;" parent="rk7dsDZR8d2DrV0-smFm-6" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="470" y="680" as="sourcePoint" />
-            <mxPoint x="560" y="680" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry x="2445" y="240" width="190" height="80" as="geometry" />
         </mxCell>
         <mxCell id="EVEhAqWLauaJiKE-zSVz-1" value="" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="78.74" y="19.685" width="3208.6549999999997" height="2303.145" as="geometry" />
@@ -10572,148 +10488,223 @@
           <mxGeometry x="2740.16" y="2084.28" width="471.84" height="59" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-2" value="Assets" style="childLayout=tableLayout;recursiveResize=0;strokeColor=#98bf21;fillColor=#A7C942;shadow=1;fontFamily=GOST type A;fontStyle=2;fontSize=30;" vertex="1" parent="1">
-          <mxGeometry x="160" y="1450" width="1600" height="788" as="geometry" />
+          <mxGeometry x="160" y="1200" width="1600" height="908" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-3" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry width="1600" height="136" as="geometry" />
+          <mxGeometry width="1600" height="157" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-4" value="Параметр" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=3;fontColor=#FFFFFF;html=1;fontFamily=GOST type A;fontSize=50;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-3">
-          <mxGeometry width="531" height="136" as="geometry">
-            <mxRectangle width="531" height="136" as="alternateBounds" />
+          <mxGeometry width="531" height="157" as="geometry">
+            <mxRectangle width="531" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-5" value="Было" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=3;fontColor=#FFFFFF;html=1;fontFamily=GOST type A;fontSize=50;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-3">
-          <mxGeometry x="531" width="538" height="136" as="geometry">
-            <mxRectangle width="538" height="136" as="alternateBounds" />
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-5" value="Вручную" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=3;fontColor=#FFFFFF;html=1;fontFamily=GOST type A;fontSize=50;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-3">
+          <mxGeometry x="531" width="538" height="157" as="geometry">
+            <mxRectangle width="538" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-6" value="Стало" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=3;fontColor=#FFFFFF;html=1;fontFamily=GOST type A;fontSize=50;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-3">
-          <mxGeometry x="1069" width="531" height="136" as="geometry">
-            <mxRectangle width="531" height="136" as="alternateBounds" />
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-6" value="С помощью системы" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=3;fontColor=#FFFFFF;html=1;fontFamily=GOST type A;fontSize=50;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-3">
+          <mxGeometry x="1069" width="531" height="157" as="geometry">
+            <mxRectangle width="531" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-7" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry y="136" width="1600" height="132" as="geometry" />
+          <mxGeometry y="157" width="1600" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-8" value="Скорость заполнения данных клиента, мин." style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-7">
-          <mxGeometry width="531" height="132" as="geometry">
-            <mxRectangle width="531" height="132" as="alternateBounds" />
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-8" value="Скорость заполнения данных клиента, мин. *" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-7">
+          <mxGeometry width="531" height="152" as="geometry">
+            <mxRectangle width="531" height="152" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-9" value="60" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-7">
-          <mxGeometry x="531" width="538" height="132" as="geometry">
-            <mxRectangle width="538" height="132" as="alternateBounds" />
+          <mxGeometry x="531" width="538" height="152" as="geometry">
+            <mxRectangle width="538" height="152" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-10" value="15" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-7">
-          <mxGeometry x="1069" width="531" height="132" as="geometry">
-            <mxRectangle width="531" height="132" as="alternateBounds" />
+          <mxGeometry x="1069" width="531" height="152" as="geometry">
+            <mxRectangle width="531" height="152" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry y="268" width="1600" height="128" as="geometry" />
+          <mxGeometry y="309" width="1600" height="147" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-12" value="Количество ошибок при заполнении данных, %" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-11">
-          <mxGeometry width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry width="531" height="147" as="geometry">
+            <mxRectangle width="531" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-13" value="5" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-11">
-          <mxGeometry x="531" width="538" height="128" as="geometry">
-            <mxRectangle width="538" height="128" as="alternateBounds" />
+          <mxGeometry x="531" width="538" height="147" as="geometry">
+            <mxRectangle width="538" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-14" value="4" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-11">
-          <mxGeometry x="1069" width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry x="1069" width="531" height="147" as="geometry">
+            <mxRectangle width="531" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-15" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry y="396" width="1600" height="136" as="geometry" />
+          <mxGeometry y="456" width="1600" height="157" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-16" value="Скорость проверки документов клиента, мин." style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=2;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-15">
-          <mxGeometry width="531" height="136" as="geometry">
-            <mxRectangle width="531" height="136" as="alternateBounds" />
+          <mxGeometry width="531" height="157" as="geometry">
+            <mxRectangle width="531" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-17" value="120" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=2;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-15">
-          <mxGeometry x="531" width="538" height="136" as="geometry">
-            <mxRectangle width="538" height="136" as="alternateBounds" />
+          <mxGeometry x="531" width="538" height="157" as="geometry">
+            <mxRectangle width="538" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-18" value="10" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=2;align=center;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-15">
-          <mxGeometry x="1069" width="531" height="136" as="geometry">
-            <mxRectangle width="531" height="136" as="alternateBounds" />
+          <mxGeometry x="1069" width="531" height="157" as="geometry">
+            <mxRectangle width="531" height="157" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-19" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry y="532" width="1600" height="128" as="geometry" />
+          <mxGeometry y="613" width="1600" height="148" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-20" value="Время ожидания клиента, ч." style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-19">
-          <mxGeometry width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry width="531" height="148" as="geometry">
+            <mxRectangle width="531" height="148" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-21" value="24" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-19">
-          <mxGeometry x="531" width="538" height="128" as="geometry">
-            <mxRectangle width="538" height="128" as="alternateBounds" />
+          <mxGeometry x="531" width="538" height="148" as="geometry">
+            <mxRectangle width="538" height="148" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-22" value="5" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-19">
-          <mxGeometry x="1069" width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry x="1069" width="531" height="148" as="geometry">
+            <mxRectangle width="531" height="148" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-34" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-2">
-          <mxGeometry y="660" width="1600" height="128" as="geometry" />
+          <mxGeometry y="761" width="1600" height="147" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-35" value="Среднее время работы риск-менеджера по заявке, мин." style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;strokeColor=light-dark(#98bf20, #ededed);" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-34">
-          <mxGeometry width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry width="531" height="147" as="geometry">
+            <mxRectangle width="531" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-36" value="55" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;strokeColor=light-dark(#98bf20, #ededed);" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-34">
-          <mxGeometry x="531" width="538" height="128" as="geometry">
-            <mxRectangle width="538" height="128" as="alternateBounds" />
+          <mxGeometry x="531" width="538" height="147" as="geometry">
+            <mxRectangle width="538" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-37" value="12" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=40;strokeColor=light-dark(#a1c43a, #ededed);" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-34">
-          <mxGeometry x="1069" width="531" height="128" as="geometry">
-            <mxRectangle width="531" height="128" as="alternateBounds" />
+          <mxGeometry x="1069" width="531" height="147" as="geometry">
+            <mxRectangle width="531" height="147" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-42" value="Сравнительная характеристика внедрения системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" vertex="1" parent="1">
-          <mxGeometry x="395" y="1340" width="1130" height="80" as="geometry" />
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-42" value="Результаты внедрения системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="395" y="1080" width="1130" height="80" as="geometry" />
         </mxCell>
         <mxCell id="I5al_S_1XAYNemiIi5JJ-43" value="Возможные улучшения системы" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" vertex="1" parent="1">
           <mxGeometry x="2030" y="1400" width="1040" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-44" value="&lt;div style=&quot;line-height: 200%;&quot;&gt;1. Улучшения качества компонентов гибридной модели обработки лизинговой документации.&lt;div&gt;2. Добавление механизмов работы с поставщиками.&lt;/div&gt;&lt;div&gt;3. Увеличение количества видов обрабатываемых документов.&lt;/div&gt;&lt;div&gt;4. Добавление механизмов работы с страховыми компаниями.&lt;/div&gt;&lt;div&gt;5. Предоставление пользователям лизингового калькулятора.&lt;/div&gt;&lt;div&gt;6. Предоставление пользователям интерфейса для самостоятельного оформления лизинга&lt;/div&gt;&lt;div&gt;7. Расширение количества отчетов для администратора.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=40;fontStyle=2" vertex="1" parent="1">
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-44" value="&lt;div style=&quot;line-height: 200%;&quot;&gt;1. Улучшения качества компонентов гибридной модели обработки лизинговой документации.&lt;div&gt;2. Добавление механизмов работы с поставщиками.&lt;/div&gt;&lt;div&gt;3. Увеличение количества видов обрабатываемых документов.&lt;/div&gt;&lt;div&gt;4. Добавление механизмов работы со страховыми компаниями.&lt;/div&gt;&lt;div&gt;5. Предоставление пользователям лизингового калькулятора.&lt;/div&gt;&lt;div&gt;6. Предоставление пользователям интерфейса для самостоятельного оформления лизинга&lt;/div&gt;&lt;div&gt;7. Расширение номенклатуры отчетов для администратора.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=40;fontStyle=2" vertex="1" parent="1">
           <mxGeometry x="1898.7" y="1500" width="1352.61" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-54" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1460" y="240" width="1760" height="1070" as="geometry" />
+        <mxCell id="ic3qRO5advdu0OhZKvqw-3" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="160" y="460" width="1625" height="490" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-47" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;1. Проанализированы текущие бизнес-процессы лизинговых компаний, возможные варианты имущества, подходящие для данной услуги.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry width="1760" height="110" as="geometry" />
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-6" value="RabbitMQ" style="verticalAlign=middle;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=35;fontFamily=GOST type A;" parent="ic3qRO5advdu0OhZKvqw-3" vertex="1">
+          <mxGeometry x="800" y="195" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-48" value="&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;2. Выполнен анализ обработки и верификации документов, который включает в себя этапы&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;проверки комплекта документов,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;анализ условий лизингового договора,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;проверка графика платежей,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;оценка финансовой нагрузки клиента,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;соответствие законодательству.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="110" width="1760" height="160" as="geometry" />
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-8" value="База данных" style="verticalAlign=middle;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=35;fontFamily=GOST type A;" parent="ic3qRO5advdu0OhZKvqw-3" vertex="1">
+          <mxGeometry y="330" width="230" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-49" value="&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none;&quot;&gt;3. В рамках задачи автоматизации процесса обработки и верификации документов была разработана гибридная модель машинного обучения обработки лизинговой документации.&lt;/span&gt;&lt;/div&gt;&lt;br class=&quot;Apple-interchange-newline&quot;&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="270" width="1750" height="120" as="geometry" />
+        <mxCell id="6sha8AjKCExH68ELcRU6-6" value="" style="group" parent="ic3qRO5advdu0OhZKvqw-3" vertex="1" connectable="0">
+          <mxGeometry x="1120" y="5" width="505" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-50" value="&lt;div&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;4. Для извлечения именованных сущностей была обучена модель нейронной сети&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;NER&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;на заранее подготовленном наборе данных. Она позволяет извлекать такие данные, как наименования компаний, ФИО людей, паспортные данные.&lt;/span&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="390" width="1750" height="120" as="geometry" />
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-7" value="&lt;font style=&quot;font-size: 35px;&quot;&gt;Модуль обработки документов&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
+          <mxGeometry width="505" height="479.99999999999994" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-51" value="&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;5. Для распознавания таблиц была обучена модель нейронной сети на основе архитектуры&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;Faster&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;R&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;-&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;CNN&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;. Для обучения был разработан алгоритм, позволяющий автоматически выполнять обработку документов для извлечения координат таблиц и ячеек в документах.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="510" width="1760" height="160" as="geometry" />
+        <mxCell id="6sha8AjKCExH68ELcRU6-1" value="Модель классификации документов" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
+          <mxGeometry x="16.117021276595747" y="77.83783783783784" width="220.26595744680853" height="155.67567567567568" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-52" value="&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;6. Модуль верификации документов включает в себя проверку печатей и подписей. Для обнаружения печатей был разработан алгоритм, позволяющий выделять элементы синего цвета на страницах. Применение схожего алгоритма для распознавания подписей не дало положительных результатов, поэтому для решения данной задачи была использована готовая модель нейронной сети на основе&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;YOLO&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="670" width="1760" height="220" as="geometry" />
+        <mxCell id="6sha8AjKCExH68ELcRU6-2" value="Модель распознавания именованных сущностей" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
+          <mxGeometry x="16.117021276595747" y="259.4594594594594" width="220.26595744680853" height="194.59459459459458" as="geometry" />
         </mxCell>
-        <mxCell id="I5al_S_1XAYNemiIi5JJ-53" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;7. В технологической части было рассмотрено место программной системы верификации лизинговой документации в бизнес-процессе лизинговой компании. В результате была разработана схема, демонстрирующая положение системы в структуре компании.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="I5al_S_1XAYNemiIi5JJ-54">
-          <mxGeometry y="890" width="1760" height="180" as="geometry" />
+        <mxCell id="6sha8AjKCExH68ELcRU6-4" value="Модель распознавания таблиц" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
+          <mxGeometry x="257.87234042553195" y="77.83783783783784" width="220.26595744680853" height="155.67567567567568" as="geometry" />
+        </mxCell>
+        <mxCell id="6sha8AjKCExH68ELcRU6-5" value="Модель верификации документов" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-6" vertex="1">
+          <mxGeometry x="257.87234042553195" y="272.43243243243245" width="220.26595744680853" height="155.67567567567568" as="geometry" />
+        </mxCell>
+        <mxCell id="6sha8AjKCExH68ELcRU6-7" value="" style="group" parent="ic3qRO5advdu0OhZKvqw-3" vertex="1" connectable="0">
+          <mxGeometry width="225" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="0-iVg1RCnTKMaK7Gy46d-2" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Браузер пользователя&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-7" vertex="1">
+          <mxGeometry width="225" height="260.00000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-2" value="Интерфейс системы" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-7" vertex="1">
+          <mxGeometry x="21.428571428571427" y="130.00000000000003" width="171.42857142857142" height="94.54545454545456" as="geometry" />
+        </mxCell>
+        <mxCell id="6sha8AjKCExH68ELcRU6-8" value="" style="group;spacingTop=19.685;" parent="ic3qRO5advdu0OhZKvqw-3" vertex="1" connectable="0">
+          <mxGeometry x="400" width="280" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-3" value="&lt;font style=&quot;font-size: 35px;&quot;&gt;Сервер приложения&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=2;html=1;whiteSpace=wrap;fontSize=30;fontFamily=GOST type A;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
+          <mxGeometry width="280" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-9" value="Слой контроля доступа" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
+          <mxGeometry x="26.66666666666667" y="90" width="220.00000000000003" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1tEjjia0BTDTh7AbYEc9-10" value="Слой бизнес-логики" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
+          <mxGeometry x="26.667586206896555" y="240" width="220.0027586206897" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="q3dtxIVGsu_f9Qy2fP7t-1" value="Слой работы с сервисами" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontStyle=2;fontSize=35;" parent="6sha8AjKCExH68ELcRU6-8" vertex="1">
+          <mxGeometry x="26.667586206896555" y="370" width="220.0027586206897" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6sha8AjKCExH68ELcRU6-9" value="" style="endArrow=none;html=1;rounded=0;" parent="ic3qRO5advdu0OhZKvqw-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="225" y="129.54999999999995" as="sourcePoint" />
+            <mxPoint x="400" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rk7dsDZR8d2DrV0-smFm-3" value="" style="endArrow=none;html=1;rounded=0;" parent="ic3qRO5advdu0OhZKvqw-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="380" as="sourcePoint" />
+            <mxPoint x="400" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rk7dsDZR8d2DrV0-smFm-4" value="" style="endArrow=none;html=1;rounded=0;" parent="ic3qRO5advdu0OhZKvqw-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="244.80999999999995" as="sourcePoint" />
+            <mxPoint x="800" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic3qRO5advdu0OhZKvqw-1" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="ic3qRO5advdu0OhZKvqw-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="244.58000000000004" as="sourcePoint" />
+            <mxPoint x="1120" y="244.7700000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic3qRO5advdu0OhZKvqw-5" value="* Измерения проведены на компьютере в конфигурации: intel Core i7, 12 ядер процессора, 2.7 ГГц частота процессора, тип ОЗУ DDR4, объем ОЗУ 16 Гб, объем ПЗУ 256 Гб." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=30;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="160" y="2140" width="1600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ic3qRO5advdu0OhZKvqw-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1840" y="350" width="1400" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-47" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;1. Проанализированы текущие бизнес-процессы лизинговых компаний, возможные варианты имущества, подходящие для данной услуги.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; text-align: justify; text-indent: 35.45pt;&quot;&gt;Выполнен анализ обработки и верификации документов&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry width="1400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-49" value="&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none;&quot;&gt;2. разработана гибридная модель машинного обучения обработки лизинговой документации.&lt;/span&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry y="180" width="1400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-50" value="&lt;div&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;4. Обучена модель нейронной сети&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;NER&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; text-indent: 35.45pt;&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;на заранее подготовленном наборе данных. с целью извлечения именованных сущностей (наименования компаний, ФИО людей, паспортные данные).&lt;/span&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry y="260" width="1400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-51" value="&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;5. Обучена модель нейронной сети на основе архитектуры&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;Faster&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;R&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;-&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;CNN&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start; text-indent: 0px;&quot;&gt;. Разработан алгоритм, позволяющий автоматически выполнять обработку документов для извлечения координат таблиц и ячеек в документах.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry y="390" width="1400" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-52" value="&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;6. Разработан модуль верификации документов, который включает в себя проверку печатей и подписей. Разработан алгоритм, позволяющий выделять печати синего цвета на страницах. Применение данного алгоритма для распознавания подписей не дало положительных результатов, поэтому для решения данной задачи была использована готовая модель нейронной сети на основе&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;YOLO&lt;/span&gt;&lt;span lang=&quot;RU&quot; style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry y="560" width="1400" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="I5al_S_1XAYNemiIi5JJ-53" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;GOST type A&amp;quot;; font-size: 40px; font-style: italic; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;7. В технологической части было определено место программной системы верификации лизинговой документации в бизнес-процессе лизинговой компании. В результате была разработана схема, демонстрирующая положение системы в структуре компании.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="ic3qRO5advdu0OhZKvqw-6">
+          <mxGeometry y="830" width="1400" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
