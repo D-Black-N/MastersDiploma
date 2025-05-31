@@ -1,20 +1,20 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronDown, faChevronUp, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
 import App from './App.vue'
 import router from './router'
-import i18n from '@/i18n/index';
+import { createPinia } from 'pinia'
+import { useAuthStore } from './store/auth'
 
-import './assets/styles/main.css'
-import 'font-awesome/css/font-awesome.css';
+const app = createApp(App)
 
-library.add(faChevronDown, faChevronUp, faSignOutAlt);
+// Создаем экземпляр Pinia
+const pinia = createPinia()
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon)
-              .use(router)              
-              .use(createPinia())
-              .use(i18n)
-              .mount('#app')
+// Подключаем Pinia к приложению
+app.use(pinia)
+app.use(router)
+
+// Проверяем аутентификацию перед первым рендерингом
+const authStore = useAuthStore()
+authStore.initialize() // Нужно добавить этот метод в хранилище
+
+app.mount('#app')
