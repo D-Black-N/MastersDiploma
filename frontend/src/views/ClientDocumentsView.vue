@@ -12,7 +12,7 @@
         <div class="header-title">
           <h1>Документы клиента</h1>
           <div class="client-info">
-            {{ client.name }} (ID: {{ client.id }})
+            {{ formatName(client) }} (ID: {{ client.id }})
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <div class="document-info">
             <div class="document-name">{{ document.name }}</div>
             <div class="document-meta">
-              <span>{{ document.type }}</span>
+              <span>{{ document.doc_type }}</span>
               <span>{{ formatDate(document.uploaded_at) }}</span>
               <span>{{ formatSize(document.size) }}</span>
             </div>
@@ -87,15 +87,12 @@
 export default {
   data() {
     return {
-      client: {
-        id: this.$route.params.id,
-        name: 'Иванов Иван Иванович'
-      },
+      client: {},
       documents: [
         {
           id: 1,
           name: '2-НДФЛ',
-          type: 'NDFL',
+          doc_type: 'NDFL',
           uploaded_at: '2023-05-15T10:30:00',
           size: 245678,
           url: '/documents/passport.pdf'
@@ -117,6 +114,18 @@ export default {
       if (bytes < 1024) return bytes + ' Б'
       if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' КБ'
       return (bytes / 1048576).toFixed(1) + ' МБ'
+    },
+
+    formatName(person) {
+      if (!person) return
+
+      const parts = [
+        person.last_name,
+        person.first_name,
+        person.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ')
     },
 
     viewDocument(document) {
@@ -141,6 +150,68 @@ export default {
         console.log('Отправка документов на проверку')
         // Реализация отправки
       }
+    },
+
+    async fetchClientDocuments() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.$route.params.id}/documents`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.documents = data.documents;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    async fetchClient() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.$route.params.id}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.client = data.client;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    }
+  },
+
+  mounted() {
+    // Получаем данные из параметров маршрута
+    if (this.$route.params.client) {
+      this.client = this.$route.params.client
+    } else {
+      // Если переход был без данных - загружаем с сервера
+      this.fetchClient()
     }
   }
 }

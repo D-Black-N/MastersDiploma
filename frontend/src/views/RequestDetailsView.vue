@@ -8,9 +8,9 @@
         </svg>
         Назад к списку
       </button>
-      <h1>Заявка #{{ application.id }}</h1>
-      <div class="status-badge" :class="application.status.toLowerCase()">
-        {{ application.status }}
+      <h1>Заявка #{{ request.id }}</h1>
+      <div class="status-badge">
+        {{ request.status }}
       </div>
     </div>
 
@@ -22,15 +22,15 @@
         <div class="info-grid">
           <div class="info-row">
             <span class="info-label">Срок лизинга:</span>
-            <span class="info-value">{{ application.leasing_term }} месяцев</span>
+            <span class="info-value">{{ request.leasing_term }} месяцев</span>
           </div>
           <div class="info-row">
             <span class="info-label">Тип платежа:</span>
-            <span class="info-value">{{ application.payment_type }}</span>
+            <span class="info-value">{{ request.payment_type }}</span>
           </div>
           <div class="info-row">
             <span class="info-label">Условия:</span>
-            <span class="info-value">{{ application.conditions }}</span>
+            <span class="info-value">{{ request.conditions }}</span>
           </div>
         </div>
       </div>
@@ -41,14 +41,14 @@
         <div class="info-grid">
           <div class="info-row">
             <span class="info-label">Верификация:</span>
-            <span class="info-value verification-badge" :class="application.verification_result.toLowerCase()">
-              {{ application.verification_result }}
+            <span class="info-value verification-badge" :class="request.verification_result">
+              {{ request.verification_result }}
             </span>
           </div>
           <div class="info-row">
             <span class="info-label">Уровень риска:</span>
-            <span class="info-value risk-badge" :class="'risk-' + application.risk_level">
-              {{ getRiskLevelName(application.risk_level) }}
+            <span class="info-value risk-badge">
+              {{ getRiskLevelName(request.risk_level) }}
             </span>
           </div>
         </div>
@@ -61,15 +61,14 @@
           <div class="info-row">
             <span class="info-label">Менеджер:</span>
             <span class="info-value manager-badge">
-              {{ application.manager.name }}
-              <span class="manager-contact">{{ application.manager.phone }}</span>
+              {{ formatName(request.user) }}
             </span>
           </div>
           <div class="info-row">
             <span class="info-label">Клиент:</span>
             <span class="info-value">
-              {{ application.client.name }}
-              <span class="client-contact">{{ application.client.phone }}</span>
+              {{ formatName(request.client) }}
+              <span class="client-contact">{{ request.client?.phone_number }}</span>
             </span>
           </div>
         </div>
@@ -85,11 +84,10 @@
             </svg>
           </div>
           <div class="vehicle-info">
-            <div class="vehicle-title">{{ application.vehicle.brand }} {{ application.vehicle.model }}</div>
+            <div class="vehicle-title">{{ request.vehicle?.brand }} {{ request.vehicle?.vehicle_model }}</div>
             <div class="vehicle-desc">
-              <span>Год: {{ application.vehicle.year }}</span>
-              <span>VIN: {{ application.vehicle.vin }}</span>
-              <span>Стоимость: {{ formatPrice(application.vehicle.price) }}</span>
+              <span>Год: {{ request.vehicle?.year }}</span>
+              <span>Стоимость: {{ request.vehicle?.price }}</span>
             </div>
           </div>
         </div>
@@ -104,13 +102,6 @@
           </svg>
           Редактировать
         </button>
-        
-        <button class="action-button history-button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          История изменений
-        </button>
       </div>
     </div>
   </div>
@@ -120,38 +111,17 @@
 export default {
   data() {
     return {
-      application: {
-        id: 1024,
-        leasing_term: 36,
-        payment_type: 'Аннуитетный',
-        status: 'На проверке',
-        conditions: 'Стандартные условия',
-        verification_result: 'Пройдена',
-        risk_level: 2,
-        manager: {
-          id: 1,
-          name: 'Петрова М.С.',
-          phone: '+7 (916) 123-45-67'
-        },
-        client: {
-          id: 1,
-          name: 'Иванов Иван Иванович',
-          phone: '+7 (912) 345-67-89'
-        },
-        vehicle: {
-          brand: 'Toyota',
-          model: 'Camry',
-          year: 2022,
-          vin: 'JT2BF22KXW0156789',
-          price: 2500000
-        }
-      }
+      isLoading: false,
+      error: null,
+      request: {}
     }
   },
+
   methods: {
     goBack() {
-      this.$router.push('/applications')
+      this.$router.go(-1)
     },
+
     getRiskLevelName(level) {
       const levels = {
         1: 'Низкий',
@@ -160,12 +130,53 @@ export default {
       }
       return levels[level] || 'Не определен'
     },
-    formatPrice(price) {
-      return new Intl.NumberFormat('ru-RU', {
-        style: 'currency',
-        currency: 'RUB',
-        maximumFractionDigits: 0
-      }).format(price)
+
+    formatName(person) {
+      if (!person) return 'Не определен'
+
+      const parts = [
+        person.last_name,
+        person.first_name,
+        person.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ')
+    },
+
+    async fetchRequest() {
+      this.isLoading = true
+      this.error = null
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/requests/${this.$route.params.id}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.request = data.request;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить заявку';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    }
+  },
+
+  mounted() {
+    // Получаем данные из параметров маршрута
+    if (this.$route.params.client) {
+      this.request = this.$route.params.request
+    } else {
+      // Если переход был без данных - загружаем с сервера
+      this.fetchRequest()
     }
   }
 }

@@ -3,7 +3,7 @@
 class Document < ApplicationRecord
   mount_uploader :file, DocumentUploader
 
-  enum :type, { ndfl: 0 }
+  enum :file_type, { ndfl: 'ndfl' }
 
   validates :name, presence: true
 end

@@ -10,15 +10,23 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Фамилия*</label>
-            <input v-model="client.lastName" type="text" required>
+            <input v-model="client.last_name" type="text" required>
           </div>
           <div class="form-group">
             <label>Имя*</label>
-            <input v-model="client.firstName" type="text" required>
+            <input v-model="client.first_name" type="text" required>
           </div>
           <div class="form-group">
             <label>Отчество</label>
-            <input v-model="client.middleName" type="text">
+            <input v-model="client.middle_name" type="text">
+          </div>
+          <div class="form-group">
+            <label>Паспорт: серия*</label>
+            <input v-model="client.passport_series" type="text">
+          </div>
+          <div class="form-group">
+            <label>Паспорт: номер*</label>
+            <input v-model="client.passport_number" type="text">
           </div>
         </div>
       </div>
@@ -28,10 +36,10 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Телефон*</label>
-            <input v-model="client.phone" type="tel" v-phone-mask required>
+            <input v-model="client.phone_number" type="tel" v-phone-mask required>
           </div>
           <div class="form-group">
-            <label>Email</label>
+            <label>Email*</label>
             <input v-model="client.email" type="email">
           </div>
         </div>
@@ -54,11 +62,14 @@ export default {
   data() {
     return {
       client: {
-        lastName: '',
-        firstName: '',
-        middleName: '',
-        phone: '',
-        email: ''
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        phone_number: '',
+        passport_series: '',
+        passport_number: '',
+        email: '',
+        user_id: 5
       }
     }
   },
@@ -69,13 +80,28 @@ export default {
       this.$router.push(returnTo)
     },
 
-    createClient() {
-      // Здесь будет логика создания клиента
-      console.log('Создание клиента:', this.client)
-      
-      // После создания возвращаемся обратно
-      const returnTo = this.$route.query.returnTo || '/clients'
-      this.$router.push(returnTo)
+    async createClient() {
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ client: this.client })
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+        this.goBack()
+      }
     }
   },
   directives: {

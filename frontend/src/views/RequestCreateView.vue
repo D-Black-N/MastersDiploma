@@ -19,10 +19,10 @@
         <div class="client-selection">
           <div class="form-group">
             <label>Выберите клиента</label>
-            <select v-model="form.clientId">
+            <select v-model="form.client_id">
               <option value="">-- Выберите клиента --</option>
               <option v-for="client in clients" :key="client.id" :value="client.id">
-                {{ client.fullName }} ({{ formatPhone(client.phone) }})
+                {{ formatName(client) }} ({{ client.phone_number }})
               </option>
             </select>
           </div>
@@ -50,8 +50,9 @@
           <div class="form-group">
             <label>Тип платежа</label>
             <select v-model="form.payment_type">
-              <option value="Аннуитетный">Аннуитетный</option>
-              <option value="Дифференцированный">Дифференцированный</option>
+              <option value="cash">Наличные</option>
+              <option value="bank_card">Банковская карта</option>
+              <option value="qr">QR код</option>
             </select>
           </div>
           <div class="form-group">
@@ -67,23 +68,23 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Марка</label>
-            <input v-model="form.vehicle.brand" type="text">
+            <input v-model="form.vehicle_attributes.brand" type="text">
           </div>
           <div class="form-group">
             <label>Модель</label>
-            <input v-model="form.vehicle.model" type="text">
+            <input v-model="form.vehicle_attributes.vehicle_model" type="text">
           </div>
           <div class="form-group">
             <label>Год выпуска</label>
-            <input v-model="form.vehicle.year" type="number" min="1900" :max="new Date().getFullYear()">
+            <input v-model="form.vehicle_attributes.year" type="number" min="1900" :max="new Date().getFullYear()">
           </div>
           <div class="form-group">
             <label>VIN</label>
-            <input v-model="form.vehicle.vin" type="text">
+            <input v-model="form.vehicle_attributes.vin" type="text">
           </div>
           <div class="form-group">
             <label>Стоимость (₽)</label>
-            <input v-model="form.vehicle.price" type="number" min="0">
+            <input v-model="form.vehicle_attributes.price" type="number" min="0">
           </div>
         </div>
       </div>
@@ -105,30 +106,31 @@
 export default {
   data() {
     return {
+      isLoading: false,
+      error: null,
       showClientForm: false,
-      clients: [
-        { id: 1, fullName: 'Иванов Иван Иванович', phone: '+79161234567', email: 'ivanov@example.com' },
-        { id: 2, fullName: 'Петров Петр Петрович', phone: '+79031234568', email: 'petrov@example.com' },
-        { id: 3, fullName: 'Сидорова Мария Сергеевна', phone: '+79261234569', email: 'sidorova@example.com' }
-      ],
+      clients: [],
       newClient: {
-        lastName: '',
-        firstName: '',
-        middleName: '',
-        phone: '',
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        phone_number: '',
         email: ''
       },
       form: {
-        clientId: '',
+        client_id: null,
+        user_id: 5,
         leasing_term: 36,
-        payment_type: 'Аннуитетный',
+        payment_type: 'cash',
         conditions: 'Стандартные условия',
-        vehicle: {
+        status: 'open',
+        vehicle_attributes: {
           brand: '',
-          model: '',
+          vehicle_model: '',
           year: new Date().getFullYear(),
           vin: '',
-          price: 0
+          price: 0,
+          status: 'ready'
         }
       }
     }
@@ -143,33 +145,71 @@ export default {
     },
 
     formatPhone(phone) {
-      return phone.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3-$4-$5')
+      return phone.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3 $4 $5')
     },
 
-    submitForm() {
-      // Проверка данных
-      if (!this.form.clientId && !this.showClientForm) {
-        alert('Выберите клиента или создайте нового')
-        return
-      }
+    formatName(person) {
+      const parts = [
+        person.last_name,
+        person.first_name,
+        person.middle_name
+      ]
 
-      if (this.showClientForm) {
-        // Создание нового клиента
-        const newClientId = Math.max(...this.clients.map(c => c.id)) + 1
-        this.clients.push({
-          id: newClientId,
-          fullName: `${this.newClient.lastName} ${this.newClient.firstName} ${this.newClient.middleName}`,
-          phone: this.newClient.phone,
-          email: this.newClient.email
-        })
-        this.form.clientId = newClientId
-      }
+      return parts.filter(part => part).join(' ')
+    },
 
-      // Здесь будет отправка формы на сервер
-      console.log('Создана новая заявка:', this.form)
-      
-      // Переход к списку заявок
-      this.$router.push('/applications')
+    async fetchClients() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch('http://localhost:3000/api/v1/clients', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.clients = data.clients;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    async submitForm() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/requests`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ request: this.form })
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.request = data.request;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+        this.$router.push({ name: 'RequestDetails', params: { id: this.request.id } })
+      }
     }
   },
 
@@ -182,6 +222,10 @@ export default {
         })
       }
     }
+  },
+
+  mounted() {
+    this.fetchClients()
   }
 }
 </script>

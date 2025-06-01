@@ -65,7 +65,7 @@
 
         <!-- Добавляем новую кнопку -->
         <router-link 
-          :to="{ name: 'ClientDocuments', params: { id: client.id } }"
+          :to="{ name: 'ClientDocuments', params: { id: client.id, client: client } }"
           class="action-button documents-button"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,7 @@ export default {
 
   methods: {
     goBack() {
-      this.$router.push('/clients')
+      this.$router.go(-1)
     },
 
     formatPassport(client) {
