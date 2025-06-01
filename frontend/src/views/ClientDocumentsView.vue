@@ -29,7 +29,7 @@
     <div class="documents-container">
       <!-- Кнопка загрузки -->
       <div class="upload-section">
-        <button class="upload-button">
+        <button class="upload-button" @click="showUploadModal">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M17 8L12 3L7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -80,14 +80,69 @@
         </div>
       </div>
     </div>
+
+    <!-- Модальное окно загрузки -->
+    <div v-if="show_modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Загрузка документа</h3>
+          <button @click="closeModal" class="close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="file-drop-area" @dragover.prevent="drag_over = true" 
+               @dragleave="drag_over = false" @drop="handleDrop"
+               :class="{ 'drag-over': drag_over }">
+            <input type="file" ref="fileInput" @change="handleFileChange" style="display: none">
+            <div v-if="!selected_file" class="upload-instructions">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 8L12 3L7 8" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>Перетащите файл сюда или <a href="#" @click.prevent="triggerFileInput">выберите файл</a></p>
+              <p class="file-types">Поддерживаемые форматы: PDF, JPG, PNG, DOC, DOCX</p>
+            </div>
+            
+            <div v-else class="file-preview">
+              <div class="file-icon">
+                <FileIcon :extension="fileExtension" />
+              </div>
+              <div class="file-info">
+                <div class="file-name">{{ selected_file.name }}</div>
+                <div class="file-size">{{ formatFileSize(selected_file.size) }}</div>
+              </div>
+              <button @click="removeFile" class="remove-btn">×</button>
+            </div>
+          </div>
+          
+          <div v-if="error" class="error-message">{{ error }}</div>
+        </div>
+        
+        <div class="modal-footer">
+          <button @click="closeModal" class="cancel-btn">Отменить</button>
+          <button @click="uploadFile" class="confirm-btn" :disabled="!selected_file || uploading">
+            <span v-if="!uploading">Загрузить</span>
+            <span v-else class="spinner"></span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import FileIcon from '@/components/ui/FileIcon.vue'
+
 export default {
   data() {
     return {
       client: {},
+      show_modal: false,
+      drag_over: false,
+      selected_file: null,
+      uploading: false,
+      error: null,
       documents: [
         {
           id: 1,
@@ -100,6 +155,14 @@ export default {
       ]
     }
   },
+
+  computed: {
+    fileExtension() {
+      if (!this.selected_file) return ''
+      return this.selected_file.name.split('.').pop().toLowerCase()
+    }
+  },
+
   methods: {
     goBack() {
       this.$router.go(-1)
@@ -126,6 +189,64 @@ export default {
       ]
 
       return parts.filter(part => part).join(' ')
+    },
+
+    showUploadModal() {
+      this.show_modal = true
+      this.selected_file = null
+      this.error = null
+    },
+
+    closeModal() {
+      this.show_modal = false
+      this.drag_over = false
+    },
+
+    triggerFileInput() {
+      this.$refs.fileInput.click()
+    },
+
+    handleFileChange(e) {
+      this.selected_file = e.target.files[0]
+      this.drag_over = false
+      this.validateFile()
+    },
+
+    handleDrop(e) {
+      e.preventDefault()
+      this.drag_over = false
+      if (e.dataTransfer.files.length) {
+        this.selected_dile = e.dataTransfer.files[0]
+        this.validateFile()
+      }
+    },
+
+    validateFile() {
+      const validTypes = ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx']
+      const maxSize = 5 * 1024 * 1024 // 5MB
+      
+      if (!validTypes.includes(this.fileExtension)) {
+        this.error = 'Неподдерживаемый формат файла'
+        this.selected_file = null
+      } else if (this.selected_file.size > maxSize) {
+        this.error = 'Файл слишком большой (макс. 5MB)'
+        this.selected_file = null
+      } else {
+        this.error = null
+      }
+    },
+
+    formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes'
+      const k = 1024
+      const sizes = ['Bytes', 'KB', 'MB', 'GB']
+      const i = Math.floor(Math.log(bytes) / Math.log(k))
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+    },
+
+    removeFile() {
+      this.selected_file = null
+      this.$refs.fileInput.value = ''
     },
 
     viewDocument(document) {
@@ -161,7 +282,7 @@ export default {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-          }
+          },
         });
 
         if (!response.ok) {
@@ -202,6 +323,40 @@ export default {
       } finally {
         this.isLoading = false;
       }
+    },
+
+    async uploadFile() {
+      if (!this.selected_file) {
+        this.error = 'Файл не выбран'
+        return
+      }
+      
+      this.uploading = true
+      this.error = null
+      
+      try {
+        const formData = new FormData()
+        formData.append('document[file]', this.selected_file)
+        formData.append('document[client_id]', this.client.id)
+        
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.client.id}/documents`, {
+          method: 'POST',
+          body: formData
+        })
+        
+        if (!response.ok) {
+          throw new Error('Ошибка загрузки документа')
+        }
+        
+        const result = await response.json()
+        this.documents.append(result.document)
+        this.$emit('document-uploaded', result)
+        this.closeModal()
+      } catch (err) {
+        this.error = err.message
+      } finally {
+        this.uploading = false
+      }
     }
   },
 
@@ -213,6 +368,8 @@ export default {
       // Если переход был без данных - загружаем с сервера
       this.fetchClient()
     }
+
+    this.fetchClientDocuments()
   }
 }
 </script>
@@ -433,5 +590,208 @@ export default {
     flex-direction: column;
     gap: 4px;
   }
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.document-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.document-checkbox input {
+  margin-right: 8px;
+}
+
+.document-meta {
+  flex-grow: 1;
+  color: #6b7280;
+}
+
+.upload-btn {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.file-drop-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.file-drop-area.drag-over {
+  border-color: #3b82f6;
+  background: #f0f7ff;
+}
+
+.upload-instructions {
+  color: #6b7280;
+}
+
+.upload-instructions a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.file-types {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+.file-preview {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.file-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.file-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.file-size {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.error-message {
+  color: #ef4444;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  border-top: 1px solid #e5e7eb;
+  gap: 12px;
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  padding: 8px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 </style>

@@ -6,6 +6,8 @@ class CreateDocuments < ActiveRecord::Migration[7.0]
       t.string :file_type
       t.jsonb :data, default: {}
       t.belongs_to :client
+
+      t.timestamps
     end
   end
 end
