@@ -23,15 +23,15 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Фамилия</label>
-            <input v-model="client.lastName" type="text">
+            <input v-model="client.last_name" type="text">
           </div>
           <div class="form-group">
             <label>Имя</label>
-            <input v-model="client.firstName" type="text">
+            <input v-model="client.first_name" type="text">
           </div>
           <div class="form-group">
             <label>Отчество</label>
-            <input v-model="client.middleName" type="text">
+            <input v-model="client.middle_name" type="text">
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Телефон</label>
-            <input v-model="client.phone" type="tel" v-phone-mask>
+            <input v-model="client.phone_number" type="tel" v-phone-mask>
           </div>
           <div class="form-group">
             <label>Email</label>
@@ -55,11 +55,11 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Серия паспорта</label>
-            <input v-model="client.passportSeries" type="text" maxlength="4">
+            <input v-model="client.passport_series" type="text" maxlength="4">
           </div>
           <div class="form-group">
             <label>Номер паспорта</label>
-            <input v-model="client.passportNumber" type="text" maxlength="6">
+            <input v-model="client.passport_number" type="text" maxlength="6">
           </div>
         </div>
       </div>
@@ -68,9 +68,9 @@
         <h2>Дополнительно</h2>
         <div class="form-group">
           <label>Ответственный менеджер</label>
-          <select v-model="client.managerId">
+          <select v-model="client.user_id">
             <option v-for="manager in managers" :key="manager.id" :value="manager.id">
-              {{ manager.name }}
+              {{ formatName(manager) }}
             </option>
           </select>
         </div>
@@ -83,44 +83,128 @@
 export default {
   data() {
     return {
-      client: {
-        id: 1,
-        firstName: 'Иван',
-        lastName: 'Иванов',
-        middleName: 'Иванович',
-        phone: '+79161234567',
-        email: 'ivanov@example.com',
-        passportSeries: '4510',
-        passportNumber: '123456',
-        managerId: 1
-      },
-      managers: [
-        { id: 1, name: 'Петрова М.С.' },
-        { id: 2, name: 'Сидоров А.П.' },
-        { id: 3, name: 'Козлов В.И.' }
-      ]
+      isLoading: false,
+      erorr: null,
+      client: {},
+      managers: []
     }
   },
+
   methods: {
     goBack() {
-      this.$router.go(-1)
+      this.$router.push(`/clients/${this.$route.params.id}`)
     },
-    saveClient() {
-      // Здесь будет логика сохранения
-      console.log('Сохранение клиента:', this.client)
-      this.$router.push({ name: 'ClientDetails', params: { id: this.client.id } })
+
+    formatName(user) {
+      if (!user) return 'Не указан'
+
+      const parts = [
+        user.last_name,
+        user.first_name,
+        user.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ')
+    },
+
+    async saveClient() {
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.client.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ client: this.client })
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.client = data.client;
+        this.$router.push({ name: 'ClientDetails', params: { id: this.client.id, client: this.client } })
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      }
+    },
+
+    async fetchClient() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.$route.params.id}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.client = data.client;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    async fetchManagers() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/users`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.managers = data.users;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить менеджеров';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
     }
   },
+
   directives: {
     'phone-mask': {
       inserted(el) {
         el.addEventListener('input', function(e) {
           let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/)
-          e.target.value = '+7' + (x[2] ? ' (' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '')
+          e.target.value = '+7' + (x[2] ? ' (' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? ' ' + x[4] : '') + (x[5] ? ' ' + x[5] : '')
         })
       }
     }
-  }
+  },
+
+  created() {
+    // Получаем данные из параметров маршрута
+    if (this.$route.params.client) {
+      this.client = this.$route.params.client
+    } else {
+      // Если переход был без данных - загружаем с сервера
+      this.fetchClient()
+    }
+
+    this.fetchManagers()
+  },
 }
 </script>
 

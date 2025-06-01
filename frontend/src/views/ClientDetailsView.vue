@@ -16,22 +16,22 @@
       <div class="client-info">
         <div class="info-row">
           <span class="info-label">Имя:</span>
-          <span class="info-value">{{ client.firstName }}</span>
+          <span class="info-value">{{ client.first_name }}</span>
         </div>
         
         <div class="info-row">
           <span class="info-label">Фамилия:</span>
-          <span class="info-value">{{ client.lastName }}</span>
+          <span class="info-value">{{ client.last_name }}</span>
         </div>
         
         <div class="info-row">
           <span class="info-label">Отчество:</span>
-          <span class="info-value">{{ client.middleName }}</span>
+          <span class="info-value">{{ client.middle_name }}</span>
         </div>
         
         <div class="info-row">
           <span class="info-label">Телефон:</span>
-          <span class="info-value">{{ formatPhone(client.phone) }}</span>
+          <span class="info-value">{{ client.phone_number }}</span>
         </div>
         
         <div class="info-row">
@@ -41,19 +41,19 @@
         
         <div class="info-row">
           <span class="info-label">Менеджер:</span>
-          <span class="info-value manager-badge">{{ client.managerName }}</span>
+          <span class="info-value manager-badge">{{ formatManager(client.user) }}</span>
         </div>
         
         <div class="info-row">
           <span class="info-label">Паспорт:</span>
-          <span class="info-value">{{ formatPassport(client.passportSeries, client.passportNumber) }}</span>
+          <span class="info-value">{{ formatPassport(client) }}</span>
         </div>
       </div>
 
       <!-- Дополнительные действия -->
       <div class="client-actions">
         <router-link 
-          :to="{ name: 'ClientEdit', params: { id: client.id } }"
+          :to="{ name: 'ClientEdit', params: { id: client.id, client: client } }"
           class="action-button edit-button"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,32 +86,67 @@
 export default {
   data() {
     return {
-      client: {
-        id: 1,
-        firstName: 'Иван',
-        lastName: 'Иванов',
-        middleName: 'Иванович',
-        phone: '+79161234567',
-        email: 'ivanov@example.com',
-        managerId: 1,
-        managerName: 'Петрова М.С.',
-        passportSeries: '4510',
-        passportNumber: '123456'
-      }
+      isLoading: false,
+      error: null,
+      client: {}
     }
   },
+
   methods: {
     goBack() {
-      this.$emit('unlock-sidebar')
       this.$router.push('/clients')
     },
 
-    formatPhone(phone) {
-      return phone.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3-$4-$5')
+    formatPassport(client) {
+      return `${client.passport_series} ${client.passport_number}`
     },
 
-    formatPassport(series, number) {
-      return `${series} ${number}`
+    formatManager(manager) {
+      if (!manager) return 'Не указан';
+
+      const parts = [
+        manager.last_name,
+        manager.first_name,
+        manager.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ');
+    },
+
+    async fetchClient() {
+      this.isLoading = true;
+      this.error = null;
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.$route.params.id}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.client = data.client;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
+    }
+  },
+
+  created() {
+    // Получаем данные из параметров маршрута
+    if (this.$route.params.client) {
+      this.client = this.$route.params.client
+    } else {
+      // Если переход был без данных - загружаем с сервера
+      this.fetchClient()
     }
   }
 }
