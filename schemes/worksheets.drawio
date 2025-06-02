@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.1.1" pages="14">
   <diagram name="Лист 1" id="x5ziAsaNnClO4zRs3F9P">
-    <mxGraphModel dx="859" dy="561" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="3005" dy="1963" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -534,8 +534,8 @@
         <mxCell id="kFYverO4tarZtgFE3sbo-63" value="Модуль классификации документов" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="Ec5ij6jtgKH2UX9K4Sx4-5" vertex="1">
           <mxGeometry x="354.33" y="485" width="255.905" height="78.74" as="geometry" />
         </mxCell>
-        <mxCell id="kFYverO4tarZtgFE3sbo-64" value="Модуль распознавания именованных сущностей" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="Ec5ij6jtgKH2UX9K4Sx4-5" vertex="1">
-          <mxGeometry x="560" y="620.0799999999999" width="275.59" height="78.74" as="geometry" />
+        <mxCell id="kFYverO4tarZtgFE3sbo-64" value="Модуль именованного распознавания сущностей" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="Ec5ij6jtgKH2UX9K4Sx4-5" vertex="1">
+          <mxGeometry x="541.3299999999999" y="620.08" width="314.97" height="78.74" as="geometry" />
         </mxCell>
         <mxCell id="kFYverO4tarZtgFE3sbo-65" value="Модуль верификации" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="Ec5ij6jtgKH2UX9K4Sx4-5" vertex="1">
           <mxGeometry x="1003.9400000000002" y="620.0799999999999" width="177.165" height="78.74" as="geometry" />
@@ -693,7 +693,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="eJupjWPiDXdbwRNi5G2d" name="Лист 2">
-    <mxGraphModel dx="511" dy="334" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="3005" dy="1963" grid="1" gridSize="9.8425" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -937,7 +937,7 @@
         <mxCell id="3-c2wH9UWVUNuBxZRZTV-55" value="" style="group;strokeWidth=1.5748;" parent="9_3ElDnd0yGv45SxM-e6-12" vertex="1" connectable="0">
           <mxGeometry x="1122.05" y="650" width="240" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3-c2wH9UWVUNuBxZRZTV-56" value="Извлечение данных таблиц" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontSize=30;fontStyle=2;strokeWidth=1.5748;" parent="3-c2wH9UWVUNuBxZRZTV-55" vertex="1">
+        <mxCell id="3-c2wH9UWVUNuBxZRZTV-56" value="Распознавание таблиц" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOST type A;fontSize=30;fontStyle=2;strokeWidth=1.5748;" parent="3-c2wH9UWVUNuBxZRZTV-55" vertex="1">
           <mxGeometry width="240" height="80" as="geometry" />
         </mxCell>
         <mxCell id="3-c2wH9UWVUNuBxZRZTV-57" value="&lt;font face=&quot;GOST type A&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;i&gt;4&lt;/i&gt;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;spacingTop=7.874;strokeWidth=1.5748;" parent="3-c2wH9UWVUNuBxZRZTV-55" vertex="1">
@@ -1815,14 +1815,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8q7Oy9-1V31xkZOaTqWC" name="Лист 3">
-    <mxGraphModel dx="2185" dy="1427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="4007" dy="2617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="xhjlrLoWlrv2H_yNpDqt-1" value="Классификация документов" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
           <mxGeometry x="410" y="140" width="930" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dIHFucrLMu9zbYrgQzDG-1" value="Именованное распознавания сущностей" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
+        <mxCell id="dIHFucrLMu9zbYrgQzDG-1" value="Именованное распознавание сущностей" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
           <mxGeometry x="310" y="1380" width="1130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="IcYvD-4elu13Wf5WlEu5-1" value="Схема алгоритма извлечения таблиц" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOST type A;fontSize=60;fontStyle=2" parent="1" vertex="1">
@@ -2657,7 +2657,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="A1Ev_A4xbhjeAnm3oO9n" name="Лист 4">
-    <mxGraphModel dx="316" dy="207" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="2003" dy="1308" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2700,7 +2700,7 @@
         <mxCell id="QUWRiWRt1S-2oHhPQm5_-14" value="Согласовать&amp;nbsp;&lt;div&gt;условия лизинга&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontColor=default;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="QUWRiWRt1S-2oHhPQm5_-98" vertex="1">
           <mxGeometry x="639.9999999999998" y="269.99" width="236.22" height="137.795" as="geometry" />
         </mxCell>
-        <mxCell id="QUWRiWRt1S-2oHhPQm5_-15" value="Риск-Менеджер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=35;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="QUWRiWRt1S-2oHhPQm5_-98" vertex="1">
+        <mxCell id="QUWRiWRt1S-2oHhPQm5_-15" value="Риск-менеджер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=35;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="QUWRiWRt1S-2oHhPQm5_-98" vertex="1">
           <mxGeometry x="219.1300000000001" y="1097.79" width="70.866" height="141.732" as="geometry" />
         </mxCell>
         <mxCell id="QUWRiWRt1S-2oHhPQm5_-16" value="Просмотреть&amp;nbsp;&lt;div&gt;заявку в отделе рисков&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="QUWRiWRt1S-2oHhPQm5_-98" vertex="1">
@@ -7642,7 +7642,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Dl_oC2MeWK_j_0jKbLxs" name="Лист 8">
-    <mxGraphModel dx="454" dy="296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="4007" dy="2617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -7965,7 +7965,7 @@
           <mxGeometry x="260" y="1430" width="1150" height="110" as="geometry" />
         </mxCell>
         <mxCell id="HetfdfASTsfjvPaofLtb-50" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1690" y="280" width="1200" height="1150" as="geometry" />
+          <mxGeometry x="1690" y="280" width="1310" height="1150" as="geometry" />
         </mxCell>
         <mxCell id="9NMnY2lAhj0RQynLSvah-84" value="&lt;i style=&quot;font-family: &amp;quot;GOST type A&amp;quot;; font-size: 30px;&quot;&gt;Менеджер&lt;/i&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" vertex="1">
           <mxGeometry width="59.055" height="118.11" as="geometry" />
@@ -7979,8 +7979,8 @@
         <mxCell id="9NMnY2lAhj0RQynLSvah-87" value="База данных" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" vertex="1">
           <mxGeometry x="760" y="30" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9NMnY2lAhj0RQynLSvah-88" value="Гибридная модель МО" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" vertex="1">
-          <mxGeometry x="1040" y="30" width="160" height="80" as="geometry" />
+        <mxCell id="9NMnY2lAhj0RQynLSvah-88" value="Гибридная модель" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontFamily=GOST type A;fontStyle=2;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" vertex="1">
+          <mxGeometry x="1040" y="30" width="159.8422" height="79.9211" as="geometry" />
         </mxCell>
         <mxCell id="9NMnY2lAhj0RQynLSvah-91" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -8006,10 +8006,10 @@
             <mxPoint x="839" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9NMnY2lAhj0RQynLSvah-95" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" edge="1">
+        <mxCell id="9NMnY2lAhj0RQynLSvah-95" value="" style="endArrow=none;html=1;rounded=0;dashed=1;dashPattern=8 8;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1119" y="1140" as="sourcePoint" />
-            <mxPoint x="1119" y="110" as="targetPoint" />
+            <mxPoint x="1120" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="9NMnY2lAhj0RQynLSvah-97" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;strokeWidth=1.5748;" parent="HetfdfASTsfjvPaofLtb-50" source="9NMnY2lAhj0RQynLSvah-146" target="9NMnY2lAhj0RQynLSvah-96" edge="1">
