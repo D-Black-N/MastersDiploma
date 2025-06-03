@@ -33,12 +33,19 @@ module Api
       end
 
       def destroy
-        case resolve('').call(safe_params.output)
-        in Success(data)
-          render json: Oj.to_json({ body: data }), status: :ok
-        in Failure[]
-        in Failure[]
-        end
+        render head: :not_content
+      end
+
+      schema(:send_to_check) do
+        required(:client_id).value(:integer)
+      end
+
+      def send_to_check
+        client = Client.find_by(id: safe_params[:client_id])
+        client.requests.find_each { |request| request.document_processing! }
+
+        CheckJob.set(wait: 12.seconds).perform_later(safe_params[:client_id])
+        render status: :ok
       end
 
       private

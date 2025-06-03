@@ -11,6 +11,7 @@ class Request < ApplicationRecord
     processing: 'processing',
     document_processing: 'document_processing',
     vehicle_checking: 'vehicle_checking',
+    agreed: 'agreed',
     closed: 'closed'
   }
 

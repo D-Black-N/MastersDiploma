@@ -43,14 +43,17 @@ module Api
       end
 
       def create
-        pp safe_params
-        request = Request.create!(safe_params.output[:request])
+        request = Request.new(safe_params.output[:request])
 
-        render json: request.as_json(
-          client:  { only: %i[first_name last_name middle_name id phone_number] },
-          user:    { only: %i[first_name last_name middle_name id] },
-          vehicle: { only: %i[brand vehicle_model year price] }
-        )
+        if request.save
+          render json: Oj.to_json(request: request.as_json(
+            client:  { only: %i[first_name last_name middle_name id phone_number] },
+            user:    { only: %i[first_name last_name middle_name id] },
+            vehicle: { only: %i[brand vehicle_model year price] }
+          ))
+        else
+          render json: request.errors.messages, status: :unprocessable_entity
+        end
       end
 
       schema(:update) do

@@ -119,10 +119,10 @@ export default {
       },
       form: {
         client_id: null,
-        user_id: 5,
+        user_id: 4,
         leasing_term: 36,
         payment_type: 'cash',
-        conditions: 'Стандартные условия',
+        conditions: '',
         status: 'open',
         vehicle_attributes: {
           brand: '',

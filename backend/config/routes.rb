@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :clients do
-        resources :documents, only: %i[index create destroy]
+        resources :documents, only: %i[index create destroy] do
+          post :send_to_check, on: :collection
+        end
       end
       resources :requests
       resources :users, only: %i[index]

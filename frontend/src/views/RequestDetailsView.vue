@@ -26,7 +26,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">Тип платежа:</span>
-            <span class="info-value">{{ request.payment_type }}</span>
+            <span class="info-value">{{ getPaymentType(request.payment_type) }}</span>
           </div>
           <div class="info-row">
             <span class="info-label">Условия:</span>
@@ -124,11 +124,20 @@ export default {
 
     getRiskLevelName(level) {
       const levels = {
-        1: 'Низкий',
-        2: 'Средний',
-        3: 'Высокий'
+        'green': 'Низкий',
+        'yellow': 'Средний',
+        'red': 'Высокий'
       }
       return levels[level] || 'Не определен'
+    },
+
+    getPaymentType(type) {
+      const types = {
+        'bank_card': 'Банковская карта',
+        'cash': 'Наличные',
+        'qr': 'QR код'
+      }
+      return types[type] || 'Не определен'
     },
 
     formatName(person) {

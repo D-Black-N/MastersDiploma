@@ -165,7 +165,7 @@ export default {
 
   methods: {
     goBack() {
-      this.$router.go(-1)
+      this.$router.push(`/clients/${this.$route.params.id}`)
     },
 
     formatDate(dateString) {
@@ -266,10 +266,28 @@ export default {
       }
     },
 
-    submitForVerification() {
-      if (confirm('Отправить все документы на проверку?')) {
-        console.log('Отправка документов на проверку')
-        // Реализация отправки
+    async submitForVerification() {
+      alert('Документы были отправлены на проверку')
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/v1/clients/${this.$route.params.id}/documents/send_to_check`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.documents = data.documents;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиента';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
       }
     },
 
@@ -349,7 +367,7 @@ export default {
         }
         
         const result = await response.json()
-        this.documents.append(result.document)
+        this.documents.push(result.document)
         this.$emit('document-uploaded', result)
         this.closeModal()
       } catch (err) {
