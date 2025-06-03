@@ -3,7 +3,7 @@
 class Vehicle < ApplicationRecord
   has_one :request
 
-  enum :status, { finding: 0, verifying: 1, processing: 2, ready: 3 }
+  enum :status, { finding: 'finding', verifying: 'verifying', processing: 'processing', ready: 'ready' }
 
-  validates :brand, :model, :year, presence: true
+  validates :brand, :vehicle_model, :year, presence: true
 end

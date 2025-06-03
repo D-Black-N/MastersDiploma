@@ -61,8 +61,8 @@
           </svg>
         </div>
         <div class="user-info">
-          <div class="user-name">Иванов И.И.</div>
-          <div class="user-role">Администратор</div>
+          <div class="user-name">Насибуллин Д.И.</div>
+          <div class="user-role">Менеджер</div>
         </div>
         <button class="logout-btn" @click.stop="logout">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

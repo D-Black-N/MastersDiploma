@@ -29,7 +29,7 @@ module Verificator
     config.autoload_lib(ignore: %w(assets tasks))
 
     # DataBase schema format
-    config.active_record.schema_format = :sql
+    config.active_record.schema_format = :ruby
 
     # Configuration for the application, engines, and railties goes here.
     #

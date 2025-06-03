@@ -32,11 +32,11 @@
                 {{ client.id }}
               </router-link>
             </td>
-            <td>{{ client.fullName }}</td>
-            <td>{{ formatPhone(client.phone) }}</td>
+            <td>{{ formatName(client) }}</td>
+            <td>{{ client.phone_number }}</td>
             <td>
               <span class="manager-badge">
-                {{ client.managerName }}
+                {{ formatName(client.user) }}
               </span>
             </td>
           </tr>
@@ -50,54 +50,62 @@
 export default {
   data() {
     return {
-      clients: [
-        {
-          id: 1,
-          fullName: 'Иванов Иван Иванович',
-          phone: '+79161234567',
-          managerId: 1,
-          managerName: 'Петрова М.С.'
-        },
-        {
-          id: 2,
-          fullName: 'Смирнова Елена Владимировна',
-          phone: '+79031234568',
-          managerId: 2,
-          managerName: 'Сидоров А.П.'
-        },
-        {
-          id: 3,
-          fullName: 'Кузнецов Дмитрий Николаевич',
-          phone: '+79261234569',
-          managerId: 1,
-          managerName: 'Петрова М.С.'
-        },
-        {
-          id: 4,
-          fullName: 'Васильева Ольга Сергеевна',
-          phone: '+79111234570',
-          managerId: 3,
-          managerName: 'Козлов В.И.'
-        },
-        {
-          id: 5,
-          fullName: 'Николаев Артем Викторович',
-          phone: '+79051234571',
-          managerId: 2,
-          managerName: 'Сидоров А.П.'
-        }
-      ]
+      clients: [],
+      isLoading: false,
+      error: null
     }
   },
+
   methods: {
     goBack() {
       this.$emit('unlock-sidebar')
       this.$router.push('/')
     },
-    formatPhone(phone) {
-      // Форматирование телефона в +7 (XXX) XXX-XX-XX
-      return phone.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3-$4-$5')
+
+    formatName(person) {
+      const parts = [
+        person.last_name,
+        person.first_name,
+        person.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ');
+    },
+
+    // formatPhone(phone) {
+    //   // Форматирование телефона в +7 (XXX) XXX-XX-XX
+    //   return phone.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3 $4 $5')
+    // },
+
+    async fetchClients() {
+      this.isLoading = true;
+      this.error = null;
+      
+      try {
+        const response = await fetch('http://localhost:3000/api/v1/clients', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.clients = data.clients;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиентов';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
+      }
     }
+  },
+
+  mounted() {
+    this.fetchClients();
   }
 }
 </script>

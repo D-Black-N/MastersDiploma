@@ -46,7 +46,7 @@
                 :to="{ name: 'ClientDetails', params: { id: request.client.id } }" 
                 class="client-id-link"
               >
-                {{ request.client.fullName }}
+                {{ formatName(request.client) }}
               </router-link>
             </td>
             <td>
@@ -56,10 +56,10 @@
             </td>
             <td>
               <span class="risk-level">
-                {{ getRiskLevelName(request.riskLevel) }}
+                {{ request.risk_level }}
               </span>
             </td>
-            <td>{{ formatDate(request.createdAt) }}</td>
+            <td>{{ formatDate(request.created_at) }}</td>
           </tr>
         </tbody>
       </table>
@@ -71,79 +71,71 @@
 export default {
   data() {
     return {
-      requests: [
-        {
-          id: 1,
-          client: {
-            id: 1,
-            fullName: 'Иванов Иван Иванович'
-          },
-          status: 'Новая',
-          riskLevel: 1,
-          createdAt: '2023-05-15T10:30:00'
-        },
-        {
-          id: 2,
-          client: {
-            id: 2,
-            fullName: 'Петрова Мария Сергеевна'
-          },
-          status: 'В работе',
-          riskLevel: 2,
-          createdAt: '2023-05-14T14:45:00'
-        },
-        {
-          id: 3,
-          client: {
-            id: 3,
-            fullName: 'Сидоров Алексей Петрович'
-          },
-          status: 'Завершена',
-          riskLevel: 3,
-          createdAt: '2023-05-10T09:15:00'
-        },
-        {
-          id: 4,
-          client: {
-            id: 4,
-            fullName: 'Кузнецова Елена Владимировна'
-          },
-          status: 'Отклонена',
-          riskLevel: 2,
-          createdAt: '2023-05-08T16:20:00'
-        },
-        {
-          id: 5,
-          client: {
-            id: 5,
-            fullName: 'Васильев Дмитрий Николаевич'
-          },
-          status: 'Новая',
-          riskLevel: 1,
-          createdAt: '2023-05-17T11:10:00'
-        }
-      ]
+      isLoading: false,
+      error: null,
+      requests: []
     }
   },
+
   methods: {
     goBack() {
       this.$emit('unlock-sidebar')
       this.$router.push('/')
     },
 
+    formatName(person) {
+      const parts = [
+        person.last_name,
+        person.first_name,
+        person.middle_name
+      ]
+
+      return parts.filter(part => part).join(' ')
+    },
+
     formatDate(dateString) {
-      const options = { day: '2-digit', month: '2-digit', year: 'numeric' }
+      const options = { minute: '2-digit', hour: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' }
       return new Date(dateString).toLocaleDateString('ru-RU', options)
     },
 
-    getRiskLevelName(level) {
-      const levels = {
-        1: 'Низкий',
-        2: 'Средний',
-        3: 'Высокий'
+    // getRiskLevelName(level) {
+    //   const levels = {
+    //     1: 'Низкий',
+    //     2: 'Средний',
+    //     3: 'Высокий'
+    //   }
+    //   return levels[level] || 'Не определен'
+    // },
+
+    async fetchRequests() {
+      this.isLoading = true
+      this.error = null
+
+      try {
+        const response = await fetch('http://localhost:3000/api/v1/requests', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Ошибка сервера');
+        }
+
+        const data = await response.json();
+        this.requests = data.requests;
+      } catch (err) {
+        this.error = err.message || 'Не удалось загрузить клиентов';
+        console.error('Ошибка:', err);
+      } finally {
+        this.isLoading = false;
       }
-      return levels[level] || 'Не определен'
     }
+  },
+
+  created() {
+    this.fetchRequests()
   }
 }
 </script>
