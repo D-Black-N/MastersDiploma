@@ -4,10 +4,11 @@ services:
   frontend:
     build: frontend/
     container_name: verification-frontend
+    env_file:
+      - ./frontend/.env
     volumes:
       - ./frontend:/app
-      - /app/node_modules
-    command: npm run serve
+    command: yarn serve
     ports:
       - 8080:8080
     environment:
@@ -16,6 +17,8 @@ services:
   backend:
     build: backend/
     container_name: verification-backend
+    env_file:
+      - ./backend/.env
     volumes:
       - ./backend:/app:cached
       - ./backend/tmp/:/app/tmp:cached
@@ -24,11 +27,12 @@ services:
       - 3000:3000
     depends_on:
       - db
+    command: rails s -b 0.0.0.0
     stdin_open: true
     tty: true
 
   db:
-    image: postges:16.0
+    image: postgres:16
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
       - PGUSER=postgres
